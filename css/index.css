@@ -20,6 +20,14 @@ h2 {
   font-size: 3.2rem;
 }
 
+h3 {
+  font-size: 2.0rem;
+}
+
+p {
+  line-height: 1.6;
+}
+
 a {
   color: #339;
 }
@@ -31,6 +39,15 @@ a.kbd {
 
 em {
   color: #000;
+}
+
+dt {
+  float: left;
+}
+
+dd {
+  margin-bottom: 1rem;
+  margin-left: 8rem;
 }
 
 kbd {
@@ -106,6 +123,10 @@ article header {
 
 article h3 {
   flex: 1;
+}
+
+article li {
+  margin-bottom: 1rem;
 }
 
 article header kbd {

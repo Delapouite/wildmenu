@@ -32,11 +32,16 @@
   <nav class="nav-letters">
     <ul>
       <li><a href="#b" title="letter b">b</a></li>
+      <li><a href="#d" title="letter d">d</a></li>
+      <li><a href="#e" title="letter e">e</a></li>
       <li><a href="#f" title="letter f">f</a></li>
+      <li><a href="#g" title="letter g">g</a></li>
       <li><a href="#h" title="letter h">h</a></li>
       <li><a href="#l" title="letter l">l</a></li>
       <li><a href="#m" title="letter m">m</a></li>
       <li><a href="#t" title="letter t">t</a></li>
+      <li><a href="#u" title="letter u">u</a></li>
+      <li><a href="#y" title="letter y">y</a></li>
       <li><a href="#z" title="letter z">z</a></li>
     </ul>
   </nav>
@@ -53,15 +58,24 @@
 <section>
 <h2 id="b">b – bravo</h2>
 
+<dl>
+  <dt><kbd>b</kbd></dt>
+  <dd>move backwards to the beginning of the word</dd>
+  <dt><kbd>B</kbd></dt>
+  <dd>move backwards to the beginning of the WORD</dd>
+  <dt><kbd>CTRL-b</kbd></dt>
+  <dd>scroll <a href="#up">up</a></dd>
+</dl>
+
 <article>
 
 <header>
-  <h3 id="bottom">bottom (of window)</h3>
+  <h3 id="bottom-window">bottom of window</h3>
   <kbd>L</kbd>
   <a class="user-guide" href="https://neovim.io/doc/user/motion.html#L">see window-motions in the user-guide</a>
 </header>
 
-<p>Press <kbd>L</kbd> to jump to the bottom of the current window, on the first non-blank character. See also: <a href="#middle">middle</a> and <a href="#top">top</a></p>
+<p>Press <kbd>L</kbd> to jump to the bottom of the current window, on the first non-blank character. See also: <a href="#middle">middle</a> and <a href="#top-window">top</a></p>
 <pre><code>
 First dummy line
 
@@ -88,8 +102,20 @@ arrows.push({
 <p>Various ways to remember the <kbd>L</kbd> key:
 <ul>
   <li>High, Medium, <em>Low</em></li>
-  <li>Think of the well known HJKL arrows and rotate them by 90° (yes seriously) </li>
+  <li>Think of the well known HJKL arrows and rotate them by 90° (no joke) </li>
 </ul>
+
+</article>
+
+<article>
+
+<header>
+  <h3 id="bottom-buffer">bottom of buffer</h3>
+  <kbd>G</kbd>
+  <a class="user-guide" href="https://neovim.io/doc/user/motion.html#up-down-motions">see up-down motions in the user-guide</a>
+</header>
+
+<p>In a very long buffer, no need to hop down from paragraph to paragraph to reach the end! Pressing <kbd>G</kbd> leads you right there.</p>
 
 </article>
 
@@ -97,7 +123,69 @@ arrows.push({
 
 
 <section>
+<h2 id="d">d – delta</h2>
+
+<dl>
+  <dt><kbd>CTRL-d</kbd></dt>
+  <dd>scroll <a href="#down">down</a></dd>
+</dl>
+
+<article>
+
+<header>
+  <h3 id="down">down</h3>
+  <kbd>CTRL-d</kbd>
+  <kbd>CTRL-e</kbd>
+  <kbd>CTRL-f</kbd>
+  <a class="user-guide" href="https://neovim.io/doc/user/scroll.html#scroll-down">see scroll in the user-guide</a>
+</header>
+
+<p>The <kbd>⇟ Page Down</kbd> key is often hard to reach without leaving the <a href="#home-row">home row</a> or even absent on some laptop keyboards.</p>
+<p>To scroll the window downwards, here are a few other chords:<p>
+
+<ul>
+  <li><kbd>CTRL-f</kbd> → down a full screen</li>
+  <li><kbd>CTRL-d</kbd> → down a half screen</li>
+  <li><kbd>CTRL-e</kbd> → down the number of lines you specified as count</li>
+</ul>
+
+<p>This triad is composed of 3 consecutive letters so it's an easy way to remember them.</p>
+
+<p>Guess how to go <a href="#up">the opposite direction</a>.</p>
+
+<p>If you want to go down, you may be diving to the bottom! See how to jump to the <a href="#bottom-window">bottom of the window</a> and the <a href="#bottom-buffer">bottom of the buffer</a>.</p>
+
+</article>
+
+</section>
+
+
+<section>
+<h2 id="e">e – echo</h2>
+
+<dl>
+  <dt><kbd>e</kbd></dt>
+  <dd>move forwards to the end of the word</dd>
+  <dt><kbd>E</kbd></dt>
+  <dd>move forwards to the end of the WORD</dd>
+  <dt><kbd>ge</kbd></dt>
+  <dd>move backwards to the end of the word</dd>
+  <dt><kbd>gE</kbd></dt>
+  <dd>move backwards to the end of the WORD</dd>
+  <dt><kbd>CTRL-e</kbd></dt>
+  <dd>scroll <a href="#down">down</a></dd>
+</dl>
+
+</section>
+
+
+<section>
 <h2 id="f">f – foxtrot</h2>
+
+<dl>
+  <dt><kbd>CTRL-f</kbd></dt>
+  <dd>scroll <a href="#down">down</a></dd>
+</dl>
 
 <article>
 
@@ -116,10 +204,30 @@ arrows.push({
 
 
 <section>
+<h2 id="g">g – golf</h2>
+
+<dl>
+  <dt><kbd>g</kbd></dt>
+  <dd>do nothing by itself but the key is easily accessible under the index finger.
+    Therefore it's a handy prefix key for a mix-bag of other commands. See each respective letter to dive into this "secondary layout".</dd>
+  <dt><kbd>gg</kbd></dt>
+  <dd>jump to the beginning of the buffer</dd>
+  <dt><kbd>G</kbd></dt>
+  <dd>jump to the end of the buffer</dd>
+</dl>
+
+</section>
+
+
+<section>
 <h2 id="h">h – hotel</h2>
 
-<p><kbd>h</kbd> moves the cursor to the left</p>
-<p><kbd>H</kbd> jumps to <a href="#top">top</a></p>
+<dl>
+  <dt><kbd>h</kbd></dt>
+  <dd>move the cursor to the character on the left</dd>
+  <dt><kbd>H</kbd></dt>
+  <dd>jump to the <a href="#top-window">top</a> of the window</dd>
+</dl>
 
 <article>
 
@@ -138,8 +246,14 @@ arrows.push({
 <section>
 <h2 id="l">l – lima</h2>
 
-  <p><kbd>l</kbd> moves the cursor to the right</p>
-  <p><kbd>L</kbd> jumps to <a href="#bottom">bottom</a></p>
+<dl>
+  <dt><kbd>l</kbd></dt>
+  <dd>move the cursor to the character on the right</dd>
+  <dt><kbd>L</kbd></dt>
+  <dd>jump to the <a href="#bottom-window">bottom</a> of the window</dd>
+  <dt><kbd>CTRL-l</kbd></dt>
+  <dd>redraw the screen</dd>
+</dl>
 
 </section>
 
@@ -206,12 +320,12 @@ arrows.push({
 <article>
 
 <header>
-  <h3 id="middle">middle (of window)</h3>
+  <h3 id="middle">middle of window</h3>
   <kbd>M</kbd>
   <a class="user-guide" href="https://neovim.io/doc/user/motion.html#M">see window-motions in the user-guide</a>
 </header>
 
-<p>Press <kbd>M</kbd> to jump to the middle of the current window, on the first non-blank character. See also: <a href="#top">top</a> and <a href="#bottom">bottom</a></p>
+<p>Press <kbd>M</kbd> to jump to the middle of the current window, on the first non-blank character. See also: <a href="#top-window">top</a> and <a href="#bottom-window">bottom</a></p>
 <pre><code>
 First line visible in the window
 This small window is 9 lines high
@@ -248,12 +362,12 @@ arrows.push({
 <article>
 
 <header>
-  <h3 id="top">top (of window)</h3>
+  <h3 id="top-window">top of window</h3>
   <kbd>H</kbd>
   <a class="user-guide" href="https://neovim.io/doc/user/motion.html#H">see window-motions in the user-guide</a>
 </header>
 
-<p>Press <kbd>H</kbd> to jump to the top of the current window, on the first non-blank character. See also: <a href="#middle">middle</a> and <a href="#bottom">bottom</a></p>
+<p>Press <kbd>H</kbd> to jump to the top of the current window, on the first non-blank character. See also: <a href="#middle">middle</a> and <a href="#bottom-window">bottom</a></p>
 <pre><code>
   <target id="top-t">F</target>irst line visible in the window
 Dummy line
@@ -284,13 +398,77 @@ arrows.push({
 
 </article>
 
+<article>
+
+<header>
+  <h3 id="top-buffer">top of buffer</h3>
+  <kbd>gg</kbd>
+  <a class="user-guide" href="https://neovim.io/doc/user/motion.html#up-down-motions">see up-down motions in the user-guide</a>
+</header>
+
+</article>
+
+<p>You're deep in a file and already miss the first line of the buffer? <kbd>gg</kbd>, that is double g like in <em>Good Game</em> is your high speed ticket.</p>
+
+</section>
+
+
+<section>
+<h2 id="u">u – uniform</h2>
+
+<dl>
+  <dt><kbd>CTRL-u</kbd></dt>
+  <dd>scroll <a href="#up">up</a></dd>
+</dl>
+
+<article>
+
+<header>
+  <h3 id="up">up</h3>
+  <kbd>CTRL-b</kbd>
+  <kbd>CTRL-u</kbd>
+  <kbd>CTRL-y</kbd>
+  <a class="user-guide" href="https://neovim.io/doc/user/scroll.html#scroll-up">see scroll in the user-guide</a>
+</header>
+
+<p>The <kbd>⇞ Page Up</kbd> key is often too far away from the <a href="#home-row">home row</a> or even absent on exotic keyboards.</p>
+<p>To scroll the window upwards, here are a few other combos:<p>
+
+<ul>
+  <li><kbd>CTRL-b</kbd> → up a full screen</li>
+  <li><kbd>CTRL-u</kbd> → up a half screen</li>
+  <li><kbd>CTRL-y</kbd> → up the number of lines you specified as count</li>
+</ul>
+
+<p>This trio forms the mnemonic word <em>buy</em>.</p>
+
+<p>Discover how to go <a href="#down">the opposite direction</a>.</p>
+
+<p>If you need to go up, you may be aiming for the top! See how to jump to the <a href="#top-window">top of the window</a> and the <a href="#top-buffer">top of the buffer</a>.</p>
+
+</article>
+
+</section>
+
+
+<section>
+<h2 id="y">y – yankee</h2>
+
+<dl>
+  <dt><kbd>CTRL-y</kbd></dt>
+  <dd>scroll <a href="#up">up</a></dd>
+</dl>
+
 </section>
 
 
 <section>
 <h2 id="z">z – zulu</h2>
 
-<p><kbd>z</kbd> does nothing by itself. It's a prefix key for all the <a href="#fold">fold</a> related commands.</p>
+<dl>
+  <dt><kbd>z</kbd><dt>
+  <dd>do nothing by itself. It's a prefix key for all the <a href="#fold">fold</a> related commands.</dd>
+</dl>
 
 </section>
 
@@ -379,6 +557,7 @@ arrows.push({
 </article>
 
 </section>
+
 
 </main>
 
