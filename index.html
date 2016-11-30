@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>wildmenu - vim / neovim</title>
+  <link href="css/index.css" rel="stylesheet">
+  <link href="css/yarrow.css" rel="stylesheet">
+  <script src="js/d3-selection.min.js"></script>
+  <script src="js/svg-path-utils.min.js"></script>
+  <script src="js/yarrow.min.js"></script>
+  <script>
+    const arrowStyles = {
+      'stroke': 'gold',
+      'stroke-width': 3
+    }
+    const textStyles = {
+      'fill': 'gold',
+      'font-weight': 'bold'
+    }
+    const ya = new yarrow.Yarrow()
+    const arrows = []
+    document.addEventListener('DOMContentLoaded', () => {
+      arrows.forEach(arrow =>
+        ya.arrow(Object.assign({ arrowStyles, textStyles }, arrow)).render())
+    })
+  </script>
+</head>
+<body>
+
+<header>
+  <h1>:wildmenu — a lexicon about vim / neovim</h1>
+  <nav class="nav-letters">
+    <ul>
+      <li><a href="#b" title="letter b">b</a></li>
+      <li><a href="#h" title="letter h">h</a></li>
+      <li><a href="#l" title="letter l">l</a></li>
+      <li><a href="#m" title="letter m">m</a></li>
+      <li><a href="#t" title="letter t">t</a></li>
+    </ul>
+  </nav>
+  <nav class="nav-symbols">
+    <ul>
+      <li><a href="#single-quote" title="symbol ' (single-quote)">'</a></li>
+      <li><a href="#back-quote" title="symbol ` (back-quote)">`</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+<section>
+<h2 id="b">b – bravo</h2>
+
+<article>
+
+<header>
+  <h3 id="bottom">bottom (of window)</h3>
+  <kbd>L</kbd>
+  <a class="user-guide" href="https://neovim.io/doc/user/motion.html#L">see window-motions in the user-guide</a>
+</header>
+
+<p>Press <kbd>L</kbd> to jump to the bottom of the current window, on the first non-blank character. See also: <a href="#middle">middle</a> and <a href="#top">top</a></p>
+<pre><code>
+First dummy line
+
+A random line down below with <cursor id="bottom-c">c</cursor>ursor
+
+
+Dummy line
+  <target id="bottom-t">L</target>ast line visible in the window
+</code></pre>
+<script>
+arrows.push({
+  source: '#bottom-c',
+  target: '#bottom-t',
+  x1: ({ source }) => source.left,
+  y1: ({ source }) => source.bottom,
+  x2: ({ target }) => target.right,
+  y2: ({ target }) => target.top,
+  text: "L",
+  textStartOffset: 100,
+  textReverseDirection: true,
+})
+</script>
+
+<p>Various ways to remember the <kbd>L</kbd> key:
+<ul>
+  <li>High, Medium, <em>Low</em></li>
+  <li>Think of the well known HJKL arrows and rotate them by 90° (yes seriously) </li>
+</ul>
+
+</article>
+
+</section>
+
+
+<section>
+<h2 id="h">h – hotel</h2>
+
+<p><kbd>h</kbd> moves the cursor to the left</p>
+<p><kbd>H</kbd> jumps to <a href="#top">top</a></p>
+
+
+</section>
+
+
+<section>
+<h2 id="l">l – lima</h2>
+
+  <p><kbd>l</kbd> moves the cursor to the right</p>
+  <p><kbd>L</kbd> jumps to <a href="#bottom">bottom</a></p>
+
+</section>
+
+
+<section>
+<h2 id="m">m – mike</h2>
+
+<article>
+
+<header>
+  <h3 id="mark">mark</h3>
+  <kbd>m</kbd>
+  <kbd>'</kbd>
+  <kbd>`</kbd>
+  <a class="user-guide" href="https://neovim.io/doc/user/motion.html#mark-motions">see mark-motions in the user-guide</a>
+</header>
+
+<p>Marks are handy bookmarks that can be sprinkled over your documents for recurrent access.</p>
+<p>Create a mark on the current character with <kbd>m</kbd> followed by its name, which is an arbitrary letter of your choice:</p>
+<ul>
+  <li>lowercase letters are marks local to the current buffer.</li>
+  <li>UPPERCASE letters are global ; they are saved between editing sessions.</li>
+</ul>
+<p>For example you can add a <strong>V</strong> mark at the top of your <em>.vimrc</em> to quickly jump to it.</p>
+<p>Then, how to jump to a specific mark? Use either <a class="kbd" href="#single-quote-jump"><kbd>'</kbd></a> or <a class="kbd" href="#back-quote-jump"><kbd>`</kbd></a> keys followed by its name.</p>
+
+<pre><code>
+First boring line
+  <target id="mark-bol">S</target>econd line with the 'a' mark <target id="mark-t">p</target>laced on the 'p' of the word 'placed' (2,32)
+
+
+
+
+Current line with <cursor id="mark-c">c</cursor>ursor
+</code></pre>
+<script>
+arrows.push({
+  source: '#mark-c',
+  target: '#mark-bol',
+  x1: ({ source }) => source.left,
+  y1: ({ source }) => source.top,
+  x2: ({ target }) => target.right,
+  y2: ({ target }) => target.bottom,
+  text: "'a",
+  textStartOffset: 70,
+  textReverseDirection: true,
+})
+arrows.push({
+  source: '#mark-c',
+  target: '#mark-t',
+  x1: ({ source }) => source.right,
+  y1: ({ source }) => source.top,
+  x2: ({ target }) => target.left,
+  y2: ({ target }) => target.bottom,
+  text: '`a',
+  textStartOffset: 50,
+})
+</script>
+
+<p>Unfortunately marks are invisible! So if you don't remember where you set your them, use the <cmd>:marks</cmd> to display the list. Some plugins can also display them in the <em>sign column</em>.</p>
+
+</article>
+
+<article>
+
+<header>
+  <h3 id="middle">middle (of window)</h3>
+  <kbd>M</kbd>
+  <a class="user-guide" href="https://neovim.io/doc/user/motion.html#M">see window-motions in the user-guide</a>
+</header>
+
+<p>Press <kbd>M</kbd> to jump to the middle of the current window, on the first non-blank character. See also: <a href="#top">top</a> and <a href="#bottom">bottom</a></p>
+<pre><code>
+First line visible in the window
+This small window is 9 lines high
+
+  Nope, nothing to see on this line.
+  <target id="middle-t">I</target>'m the middle line!
+
+
+Current line with <cursor id="middle-c">c</cursor>ursor
+Dummy line
+</code></pre>
+<script>
+arrows.push({
+  source: '#middle-c',
+  target: '#middle-t',
+  x1: ({ source }) => source.left,
+  y1: ({ source }) => source.top,
+  x2: ({ target }) => target.right,
+  y2: ({ target }) => target.bottom,
+  text: "M",
+  textStartOffset: 50,
+  textReverseDirection: true,
+})
+</script>
+
+</article>
+
+</section>
+
+
+<section>
+<h2 id="t">t – tango</h2>
+
+<article>
+
+<header>
+  <h3 id="top">top (of window)</h3>
+  <kbd>H</kbd>
+  <a class="user-guide" href="https://neovim.io/doc/user/motion.html#H">see window-motions in the user-guide</a>
+</header>
+
+<p>Press <kbd>H</kbd> to jump to the top of the current window, on the first non-blank character. See also: <a href="#middle">middle</a> and <a href="#bottom">bottom</a></p>
+<pre><code>
+  <target id="top-t">F</target>irst line visible in the window
+Dummy line
+
+A random line down with <cursor id="top-c">c</cursor>ursor
+Dummy line
+</code></pre>
+<script>
+arrows.push({
+  source: '#top-c',
+  target: '#top-t',
+  x1: ({ source }) => source.left,
+  y1: ({ source }) => source.top,
+  x2: ({ target }) => target.right,
+  y2: ({ target }) => target.bottom,
+  text: "H",
+  textStartOffset: 50,
+  textReverseDirection: true,
+})
+</script>
+
+<p>A few ways to remember the <kbd>H</kbd> key:
+<ul>
+  <li>Header</li>
+  <li><em>High</em>, Medium, Low</li>
+  <li>Think of the well known HJKL arrows and rotate them by 90° (yes seriously) </li>
+</ul>
+
+</article>
+
+</section>
+
+
+<section>
+<h2 id="single-quote">' – single-quote</h2>
+
+<article>
+
+<header>
+  <h3 id="single-quote-jump">' jump</h3>
+  <kbd>'</kbd>
+  <a class="user-guide" href="https://neovim.io/doc/user/motion.html#mark-motions">see mark-motions in the user-guide</a>
+</header>
+
+<p>There's no visible clue but the letter <em>p</em> of the word <em>placed</em> has previously been <a href="#mark">marked</a> with the name <em>a</em>.</p>
+<p>To jump to the first non-blank character of this line, use <kbd>'</kbd> followed by the mark name, so in this case <kbd>'a</kbd>.</p>
+
+<pre><code>
+First boring line
+  <target id="mark-single-t">S</target>econd line with the 'a' mark placed on the 'p' of the word 'placed' (2,32)
+
+
+
+
+Current line with <cursor id="mark-single-c">c</cursor>ursor
+</code></pre>
+<script>
+arrows.push({
+  source: '#mark-single-c',
+  target: '#mark-single-t',
+  x1: ({ source }) => source.left,
+  y1: ({ source }) => source.top,
+  x2: ({ target }) => target.right,
+  y2: ({ target }) => target.bottom,
+  text: "'a",
+  textStartOffset: 70,
+  textReverseDirection: true,
+})
+</script>
+
+<p>See also <a class="kbd" href="#back-quote-jump"><kbd>`</kbd></a> to land more precisely.</p>
+
+</article>
+
+</section>
+
+
+<section>
+<h2 id="back-quote">` – back-quote</h2>
+
+<article>
+
+<header>
+  <h3 id="back-quote-jump">` jump</h3>
+  <kbd>'</kbd>
+  <a class="user-guide" href="https://neovim.io/doc/user/motion.html#mark-motions">see mark-motions in the user-guide</a>
+</header>
+
+<p>You can't see it but the letter <em>p</em> of the word <em>placed</em> has previously been <a href="#mark">marked</a> with the name <em>a</em>.</p>
+<p>To jump to this position, use <kbd>`</kbd> followed by the mark name, so in this case <kbd>`a</kbd>.</p>
+
+<pre><code>
+First boring line
+  Second line with the 'a' mark <target id="mark-back-t">p</target>laced on the 'p' of the word 'placed' (2,32)
+
+
+
+
+Current line with <cursor id="mark-back-c">c</cursor>ursor
+</code></pre>
+<script>
+arrows.push({
+  source: '#mark-back-c',
+  target: '#mark-back-t',
+  x1: ({ source }) => source.right,
+  y1: ({ source }) => source.top,
+  x2: ({ target }) => target.left,
+  y2: ({ target }) => target.bottom,
+  text: '`a',
+  textStartOffset: 50,
+})
+</script>
+<p>See also <a class="kbd" href="#single-quote-jump"><kbd>'</kbd></a> to land at the beginning of the line.</p>
+
+</article>
+
+</section>
+
+</main>
+
+<footer>
+  <p>This document lists commands, options and concepts associated to each symbols while using vim / neovim.</p>
+  <p>In this quick reference many explanations are mnemonic with a few exceptions.</p>
+  <p>Made with a cool text editor by <a href="http://delapouite.com">Delapouite</a> :wq</p>
+</footer>
+
+</body>
+</html>
