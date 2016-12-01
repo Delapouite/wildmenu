@@ -105,6 +105,11 @@ header li a:hover {
   background: #eee;
 }
 
+header .warning {
+  color: #900;
+  text-align: center;
+}
+
 main {
   margin: 0 auto;
   width: 60%;
