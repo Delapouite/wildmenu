@@ -37,6 +37,18 @@ a.kbd {
   text-decoration: none;
 }
 
+a.external, a.user-guide, a.plugin {
+  background-image: url(../img/external.svg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: .8em;
+  padding-right: 1em;
+}
+
+a[href*="//"]:not([href*="wildmenu.net"]) {
+    /* external link styles, use :before or :after if you want! */
+}
+
 em {
   color: #000;
 }
