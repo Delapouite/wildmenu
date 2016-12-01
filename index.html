@@ -19,6 +19,15 @@
     }
     const ya = new yarrow.Yarrow()
     const arrows = []
+    const anchors = ['top', 'right', 'bottom', 'left']
+    const s = anchors.reduce((acc, a) => {
+      acc[a[0]] = ({ source }) => source[a]
+      return acc
+    }, {})
+    const t = anchors.reduce((acc, a) => {
+      acc[a[0]] = ({ target }) => target[a]
+      return acc
+    }, {})
     document.addEventListener('DOMContentLoaded', () => {
       arrows.forEach(arrow =>
         ya.arrow(Object.assign({ arrowStyles, textStyles }, arrow)).render())
@@ -89,10 +98,7 @@ Dummy line
 arrows.push({
   source: '#bottom-c',
   target: '#bottom-t',
-  x1: ({ source }) => source.left,
-  y1: ({ source }) => source.bottom,
-  x2: ({ target }) => target.right,
-  y2: ({ target }) => target.top,
+  x1: s.l, y1: s.b, x2: t.r, y2: t.t,
   text: "L",
   textStartOffset: 100,
   textReverseDirection: true,
@@ -300,10 +306,7 @@ Current line with <cursor id="mark-c">c</cursor>ursor
 arrows.push({
   source: '#mark-c',
   target: '#mark-bol',
-  x1: ({ source }) => source.left,
-  y1: ({ source }) => source.top,
-  x2: ({ target }) => target.right,
-  y2: ({ target }) => target.bottom,
+  x1: s.l, y1: s.t, x2: t.r, y2: t.b,
   text: "'a",
   textStartOffset: 70,
   textReverseDirection: true,
@@ -311,10 +314,7 @@ arrows.push({
 arrows.push({
   source: '#mark-c',
   target: '#mark-t',
-  x1: ({ source }) => source.right,
-  y1: ({ source }) => source.top,
-  x2: ({ target }) => target.left,
-  y2: ({ target }) => target.bottom,
+  x1: s.r, y1: s.t, x2: t.l, y2: t.b,
   text: '`a',
   textStartOffset: 50,
 })
@@ -358,10 +358,7 @@ Dummy line
 arrows.push({
   source: '#middle-c',
   target: '#middle-t',
-  x1: ({ source }) => source.left,
-  y1: ({ source }) => source.top,
-  x2: ({ target }) => target.right,
-  y2: ({ target }) => target.bottom,
+  x1: s.l, y1: s.t, x2: t.r, y2: t.b,
   text: "M",
   textStartOffset: 50,
   textReverseDirection: true,
@@ -396,10 +393,7 @@ Dummy line
 arrows.push({
   source: '#top-c',
   target: '#top-t',
-  x1: ({ source }) => source.left,
-  y1: ({ source }) => source.top,
-  x2: ({ target }) => target.right,
-  y2: ({ target }) => target.bottom,
+  x1: s.l, y1: s.t, x2: t.r, y2: t.b,
   text: "H",
   textStartOffset: 50,
   textReverseDirection: true,
@@ -517,10 +511,7 @@ Current line with <cursor id="mark-single-c">c</cursor>ursor
 arrows.push({
   source: '#mark-single-c',
   target: '#mark-single-t',
-  x1: ({ source }) => source.left,
-  y1: ({ source }) => source.top,
-  x2: ({ target }) => target.right,
-  y2: ({ target }) => target.bottom,
+  x1: s.l, y1: s.t, x2: t.r, y2: t.b,
   text: "'a",
   textStartOffset: 70,
   textReverseDirection: true,
@@ -561,10 +552,7 @@ Current line with <cursor id="mark-back-c">c</cursor>ursor
 arrows.push({
   source: '#mark-back-c',
   target: '#mark-back-t',
-  x1: ({ source }) => source.right,
-  y1: ({ source }) => source.top,
-  x2: ({ target }) => target.left,
-  y2: ({ target }) => target.bottom,
+  x1: s.r, y1: s.t, x2: t.l, y2: t.b,
   text: '`a',
   textStartOffset: 50,
 })
