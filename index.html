@@ -271,12 +271,19 @@ arrows.push({
   <a class="user-guide" href="https://neovim.io/doc/user/motion.html#mark-motions">see mark-motions in the user-guide</a>
 </header>
 
+<h4>On your mark… set… go!</h4>
+
 <p>Marks are handy bookmarks that can be sprinkled over your documents for recurrent access.</p>
-<p>Create a mark on the current character with <kbd>m</kbd> followed by its name, which is an arbitrary letter of your choice:</p>
+
+<p>Technically speaking they are not much more than a saved position (line/column couple) in a given buffer.</p>
+
+<p>Create a mark on a position you want go back later with <kbd>m</kbd> followed by a <em>name</em>, which is an arbitrary letter of your choice:</p>
+
 <ul>
   <li>lowercase letters are marks local to the current buffer.</li>
   <li>UPPERCASE letters are global ; they are saved between editing sessions.</li>
 </ul>
+
 <p>For example you can add a <strong>V</strong> mark at the top of your <em>.vimrc</em> to quickly jump to it.</p>
 <p>Then, how to jump to a specific mark? Use either <a class="kbd" href="#single-quote-jump"><kbd>'</kbd></a> or <a class="kbd" href="#back-quote-jump"><kbd>`</kbd></a> keys followed by its name.</p>
 
@@ -313,7 +320,17 @@ arrows.push({
 })
 </script>
 
-<p>Unfortunately marks are invisible! So if you don't remember where you set your them, use the <cmd>:marks</cmd> to display the list. Some plugins can also display them in the <em>sign column</em>.</p>
+<p>Unfortunately marks are invisible! So if you don't remember where you set your them, use the <cmd>marks</cmd> to display the list. Some plugins can also display them in the <em>sign column</em>, like <a class="plugin" href="https://github.com/kshenoy/vim-signature">vim-signature</a>.</p>
+
+<p>To remove marks use <cmd>delmarks</cmd> and give one or several victims name. If you're a less patient person, the bang version <cmd>delmarks!</cmd> will delete all the local ones in the current buffer. Boom, pristine again!</p>
+
+<h4>Special marks</h4>
+
+<p>While you're busy choosing the right spot to set you're hand-crafted marks, vim continuously add a few in the background. Nothing happen on screen, so your flow is not interrupted by flickering.</p>
+
+<p><strong><code>''</code> </strong>and <strong><code>``</code></strong> are great because they correspond to the position before the latest jump. These marks are your ally to dance back and forth between two distant parts of code. Moreover, they follow the "double tap" pattern found again and again in vim.</p>
+
+<p><strong><code>'0</code></strong> to <strong><code>'9</code></strong>, aka the number marks, let you jump back to the last positions when you last exited vim.</p>
 
 </article>
 
