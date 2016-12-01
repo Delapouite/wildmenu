@@ -75,8 +75,11 @@ kbd {
 }
 
 cmd {
+  background: #333;
+  color: #fff;
   display: inline;
   font-family: monospace;
+  padding: .2rem;
 }
 
 header h1 {

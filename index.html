@@ -47,6 +47,8 @@
       <li><a href="#f" title="letter f">f</a></li>
       <li><a href="#g" title="letter g">g</a></li>
       <li><a href="#h" title="letter h">h</a></li>
+      <li><a href="#j" title="letter j">j</a></li>
+      <li><a href="#k" title="letter k">j</a></li>
       <li><a href="#l" title="letter l">l</a></li>
       <li><a href="#m" title="letter m">m</a></li>
       <li><a href="#t" title="letter t">t</a></li>
@@ -60,6 +62,7 @@
       <li><a href="#single-quote" title="symbol ' (single-quote)">'</a></li>
       <li><a href="#back-quote" title="symbol ` (back-quote)">`</a></li>
       <li><a href="#percent-sign" title="symbol % (percent-sign)">%</a></li>
+      <li><a href="#number-sign" title="symbol # (number-sign)">#</a></li>
     </ul>
   </nav>
 </header>
@@ -252,6 +255,42 @@ arrows.push({
 
 
 <section>
+<h2 id="j">j – juliet</h2>
+
+<dl>
+  <dt><kbd>j</kbd></dt>
+  <dd>move the cursor to the character below</dd>
+</dl>
+
+<article>
+
+<header>
+  <h3 id="jump">jump</h3>
+</header>
+
+<p>What's the difference between a move and jump you may ask? Is jumping implies a more ample movement? Yes in a sense. But the distinctive feature which makes jumps useful is that they are recorded in the jumplist.</p>
+
+<p>The current jumplist is displayed with <cmd>jumps</cmd>. It feels like a log of your recent itinerary produced by a GPS.</p>
+
+<p>To move up and down this list: <kbd>CTRL-o</kbd> (out) and <kbd>CTRL-i</kbd> (in)</p>
+
+</article>
+
+</section>
+
+
+<section>
+<h2 id="k">k – kilo</h2>
+
+<dl>
+  <dt><kbd>k</kbd></dt>
+  <dd>move the cursor to the character above</dd>
+</dl>
+
+</section>
+
+
+<section>
 <h2 id="l">l – lima</h2>
 
 <dl>
@@ -322,7 +361,7 @@ arrows.push({
 })
 </script>
 
-<p>Unfortunately marks are invisible! So if you don't remember where you set your them, use the <cmd>marks</cmd> to display the list. Some plugins can also display them in the <em>sign column</em>, like <a class="plugin" href="https://github.com/kshenoy/vim-signature">vim-signature</a>.</p>
+<p>Unfortunately marks are invisible! So if you don't remember where you set your them, use <cmd>marks</cmd> to display the list. Some plugins can also display them in the <em>sign column</em>, like <a class="plugin" href="https://github.com/kshenoy/vim-signature">vim-signature</a>.</p>
 
 <p>To remove marks use <cmd>delmarks</cmd> and give one or several victims name. If you're a less patient person, the bang version <cmd>delmarks!</cmd> will delete all the local ones in the current buffer. Boom, pristine again!</p>
 
@@ -615,8 +654,33 @@ arrows.push({
   <dd>go to {count}percentage in the file</dd>
 </dl>
 
+</section>
+
+
+<section>
+<h2 id="number-sign"># – number-sign</h2>
+
 <article>
 
+<header>
+  <h3 id="autoload-separator"># in identifiers (vimL)</h3>
+</header>
+
+<p>You've used the foo plugin for a long time and you really enjoy it. Well, except this little painful behavior that happens sometimes and that you would like to change.</p>
+
+<p>Before bothering the maintainer with your request, you start reading its source to see if you can fix it yourself. By chance, the code is neatly factorized in functions. But they all have weird and long names, like <code>foo#disable()</code> or even longer <code>foo#engine#restart()</code>.</p>
+
+<p>Your intuition tells you that the <code>#</code> symbol acts like some kind of namespace separator. And that's right. But it has a deeper meaning.</p>
+
+<p>For performance reason, evaluating too much code during vim startup will really slow down the experience. So code can be loaded on demand when execution is really needed. This mechanism is called <em>autoload</em>. In the runtime directory, there's a subdirectory called exactly like that: autoload. Scripts living inside will only be evaluated when requested.</p>
+
+<p><code>foo#disable</code> is a reflection of the file-system hierarchy: find the file called <code>autoload/foo.vim</code> and the function <code>foo#disable</code> should be inside.</p>
+
+<p>The more number signs there is, the deeper you go into subdirectories.</p>
+
+</article>
+
+</section>
 
 </main>
 
