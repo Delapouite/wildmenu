@@ -49,7 +49,7 @@ a[href*="//"]:not([href*="wildmenu.net"]) {
     /* external link styles, use :before or :after if you want! */
 }
 
-em {
+article em {
   color: #000;
 }
 
