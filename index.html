@@ -11,31 +11,7 @@
   <script src="js/d3-selection.min.js"></script>
   <script src="js/svg-path-utils.min.js"></script>
   <script src="js/yarrow.min.js"></script>
-  <script>
-    const arrowStyles = {
-      'stroke': 'gold',
-      'stroke-width': 3
-    }
-    const textStyles = {
-      'fill': 'gold',
-      'font-weight': 'bold'
-    }
-    const ya = new yarrow.Yarrow()
-    const arrows = []
-    const anchors = ['top', 'right', 'bottom', 'left']
-    const s = anchors.reduce((acc, a) => {
-      acc[a[0]] = ({ source }) => source[a]
-      return acc
-    }, {})
-    const t = anchors.reduce((acc, a) => {
-      acc[a[0]] = ({ target }) => target[a]
-      return acc
-    }, {})
-    document.addEventListener('DOMContentLoaded', () => {
-      arrows.forEach(arrow =>
-        ya.arrow(Object.assign({ arrowStyles, textStyles }, arrow)).render())
-    })
-  </script>
+  <script src="js/index.js"></script>
 </head>
 
 <body>
@@ -69,8 +45,6 @@
       <li><a href="#number-sign" title="symbol # (number-sign)">#</a></li>
     </ul>
   </nav>
-
-<include src="keyboard.html">
 
 </header>
 <div style="position: relative; margin: 0 auto; width: 664px;">
