@@ -28,10 +28,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // keys
 
+const relatedKeys = [
+  ['h', 'j', 'k', 'l'],
+  ['H', 'L', 'M'],
+  ['m', "'", '`'],
+  ['b', 'e', 'w'],
+  ['B', 'E', 'W'],
+  ['t', 'f', 'T', 'F', ';', ','],
+]
+
 document.addEventListener('DOMContentLoaded', () => {
   const kd = document.getElementById('key-details')
+  const links = [...document.querySelectorAll('#keyboard a')]
+
   document.getElementById('keyboard').addEventListener('mouseenter', ({ target }) => {
     if (target.tagName !== 'A') return false
+
+    // clean
+    links.forEach(l => l.classList.remove('related'))
+
+    const key = target.textContent.trim()
+    const set = relatedKeys.find(set => set.includes(key))
+    if (set) {
+      links.forEach(l => {
+        if (set.includes(l.textContent.trim())) l.classList.add('related')
+      })
+    }
 
     const dl = document.querySelector(`dl[data-key=${target.href.split('#')[1]}]`)
     if (!dl) return false
