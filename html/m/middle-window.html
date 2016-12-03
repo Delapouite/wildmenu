@@ -1,0 +1,33 @@
+<article>
+
+<header>
+  <h3 id="middle">middle of window</h3>
+  <kbd>M</kbd>
+  <a class="user-guide" href="https://neovim.io/doc/user/motion.html#M">see window-motions in the user-guide</a>
+</header>
+
+<p>Press <kbd>M</kbd> to jump to the middle of the current window, on the first non-blank character. See also: <a href="#top-window">top</a> and <a href="#bottom-window">bottom</a></p>
+<pre><code>
+First line visible in the window
+This small window is 9 lines high
+
+  Nope, nothing to see on this line.
+  <target id="middle-t">I</target>'m the middle line!
+
+
+Current line with <cursor id="middle-c">c</cursor>ursor
+Dummy line
+</code></pre>
+<script>
+arrows.push({
+  source: '#middle-c',
+  target: '#middle-t',
+  x1: s.l, y1: s.t, x2: t.r, y2: t.b,
+  text: "M",
+  textStartOffset: 50,
+  textReverseDirection: true,
+})
+</script>
+
+</article>
+
