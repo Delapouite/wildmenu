@@ -39,3 +39,20 @@ document.addEventListener('DOMContentLoaded', () => {
     kd.innerHTML = dl.innerHTML
   }, true)
 })
+
+// nav between sections
+
+document.addEventListener('DOMContentLoaded', () => {
+  const h2s = [...document.querySelectorAll('h2')]
+  h2s.forEach((h2, i) => {
+    const span = document.createElement('span')
+    span.textContent = h2.textContent
+    h2.innerHTML = ''
+    h2.appendChild(span)
+
+    const a = document.createElement('a')
+    a.textContent = 'top ↑'
+    a.href = "#body-top"
+    h2.appendChild(a)
+  })
+})

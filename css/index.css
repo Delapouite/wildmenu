@@ -16,8 +16,17 @@ body {
 }
 
 h2 {
+  display: flex;
   font-family: Times New Roman, serif;
   font-size: 3.2rem;
+}
+
+h2 span {
+  flex: 1;
+}
+
+h2 a {
+  font-size: 1.2rem;
 }
 
 h3 {
