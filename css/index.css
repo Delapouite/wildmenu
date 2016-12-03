@@ -113,6 +113,12 @@ header .warning {
   text-align: center;
 }
 
+#key-details {
+  min-height: 10rem;
+  margin: 0 auto;
+  width: 60%;
+}
+
 main {
   margin: 0 auto;
   width: 60%;
