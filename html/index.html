@@ -1,73 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <title>wildmenu - vim / neovim</title>
-  <link href="css/index.css" rel="stylesheet">
-  <link href="css/yarrow.css" rel="stylesheet">
-  <script src="js/d3-selection.min.js"></script>
-  <script src="js/svg-path-utils.min.js"></script>
-  <script src="js/yarrow.min.js"></script>
-  <script>
-    const arrowStyles = {
-      'stroke': 'gold',
-      'stroke-width': 3
-    }
-    const textStyles = {
-      'fill': 'gold',
-      'font-weight': 'bold'
-    }
-    const ya = new yarrow.Yarrow()
-    const arrows = []
-    const anchors = ['top', 'right', 'bottom', 'left']
-    const s = anchors.reduce((acc, a) => {
-      acc[a[0]] = ({ source }) => source[a]
-      return acc
-    }, {})
-    const t = anchors.reduce((acc, a) => {
-      acc[a[0]] = ({ target }) => target[a]
-      return acc
-    }, {})
-    document.addEventListener('DOMContentLoaded', () => {
-      arrows.forEach(arrow =>
-        ya.arrow(Object.assign({ arrowStyles, textStyles }, arrow)).render())
-    })
-  </script>
-</head>
+<include src="head.html">
 
 <body>
 
-<header>
-  <h1>:wildmenu — a lexicon about vim / neovim</h1>
-  <p class="warning">The present page is still a work in progress. Please, consider it as a draft.</p>
-  <nav class="nav-letters">
-    <ul>
-      <li><a href="#b" title="letter b">b</a></li>
-      <li><a href="#d" title="letter d">d</a></li>
-      <li><a href="#e" title="letter e">e</a></li>
-      <li><a href="#f" title="letter f">f</a></li>
-      <li><a href="#g" title="letter g">g</a></li>
-      <li><a href="#h" title="letter h">h</a></li>
-      <li><a href="#j" title="letter j">j</a></li>
-      <li><a href="#k" title="letter k">j</a></li>
-      <li><a href="#l" title="letter l">l</a></li>
-      <li><a href="#m" title="letter m">m</a></li>
-      <li><a href="#t" title="letter t">t</a></li>
-      <li><a href="#u" title="letter u">u</a></li>
-      <li><a href="#y" title="letter y">y</a></li>
-      <li><a href="#z" title="letter z">z</a></li>
-    </ul>
-  </nav>
-  <nav class="nav-symbols">
-    <ul>
-      <li><a href="#single-quote" title="symbol ' (single-quote)">'</a></li>
-      <li><a href="#back-quote" title="symbol ` (back-quote)">`</a></li>
-      <li><a href="#percent-sign" title="symbol % (percent-sign)">%</a></li>
-      <li><a href="#number-sign" title="symbol # (number-sign)">#</a></li>
-    </ul>
-  </nav>
-</header>
+<include src="header.html">
 
 <main>
 
@@ -686,11 +624,7 @@ arrows.push({
 
 </main>
 
-<footer>
-  <p>This document lists commands, options and concepts associated to each symbols while using vim / neovim.</p>
-  <p>In this quick reference many explanations are mnemonic with a few exceptions.</p>
-  <p>Made with a cool text editor by <a href="http://delapouite.com">Delapouite</a> :wq</p>
-</footer>
+<include src="footer.html">
 
 </body>
 </html>
