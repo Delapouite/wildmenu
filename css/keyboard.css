@@ -13,7 +13,7 @@ ul#keyboard a.related:hover {
   background: gold;
 }
 ul#keyboard a.related  {
-  background: #ffed8e;
+  background: #ffed8e; /* less gold */
 }
 
 ul#keyboard, ul#keyboard ul {
@@ -125,6 +125,16 @@ ul#keyboard li#key_MENU {
 /* hide LSGT for pc104 (default) */
 li#key_LSGT, li#key_CAPS105, li#key_RTRN105 {
   display: none;
+}
+
+li.ctrl {
+  cursor: pointer;
+}
+#keyboard.ctrl li.letter strong {
+ visibility: hidden;
+}
+#keyboard.ctrl li.ctrl {
+  background: gold;
 }
 
 
