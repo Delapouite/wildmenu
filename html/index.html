@@ -166,6 +166,8 @@ arrows.push({
   <dd>jump to the beginning of the buffer</dd>
   <dt><kbd>G</kbd></dt>
   <dd>jump to the end of the buffer</dd>
+  <dt><kbd>CTRL-g</kbd></dt>
+  <dd>print info about current file (same as <cmd>:file</cmd>)</dd>
 </dl>
 
 </section>
@@ -176,9 +178,11 @@ arrows.push({
 
 <dl data-key="h">
   <dt><kbd>h</kbd></dt>
-  <dd>◂ move the cursor to the char on the left</dd>
+  <dd>◂ move [count] chars to the left</dd>
   <dt><kbd>H</kbd></dt>
   <dd>jump to the <a href="#top-window">top</a> of the window</dd>
+  <dt><kbd>CTRL-h</kbd></dt>
+  <dd>◂ move [count] chars to the left (same as <kbd>h</kbd>)</dd>
 </dl>
 
 <article>
@@ -228,6 +232,8 @@ arrows.push({
 <dl data-key="k">
   <dt><kbd>k</kbd></dt>
   <dd>▴ move [count] lines upward</dd>
+  <dt><kbd>CTRL-k</kbd></dt>
+  <dd>not used</dd>
 </dl>
 
 </section>
@@ -238,11 +244,11 @@ arrows.push({
 
 <dl data-key="l">
   <dt><kbd>l</kbd></dt>
-  <dd>▸ move the cursor to the char on the right</dd>
+  <dd>▸ move [count] chars to the right</dd>
   <dt><kbd>L</kbd></dt>
   <dd>jump to the <a href="#bottom-window">bottom</a> of the window</dd>
   <dt><kbd>CTRL-l</kbd></dt>
-  <dd>redraw the screen</dd>
+  <dd>redraw screen</dd>
 </dl>
 
 </section>
@@ -268,6 +274,11 @@ arrows.push({
 
 <section>
 <h2 id="t">t – tango</h2>
+
+<dl data-key="t">
+  <dt><kbd>CTRL-t</kbd></dt>
+  <dd>jump to N older Tag in tag list</dd>
+</dl>
 
 <article>
 
@@ -366,6 +377,8 @@ arrows.push({
   <dd>▸ move forwards to the beginning of the word</dd>
   <dt><kbd>W</kbd></dt>
   <dd>▸ move forwards to the beginning of the WORD</dd>
+  <dt><kbd>CTRL-w</kbd></dt>
+  <dd>prefix for window commands</dd>
 </dl>
 
 </section>
