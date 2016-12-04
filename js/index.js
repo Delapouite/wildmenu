@@ -41,6 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const kd = document.getElementById('key-details')
   const links = [...document.querySelectorAll('#keyboard a')]
 
+  for (let kbd of document.querySelectorAll('dl kbd')) {
+    kbd.dataset.key = kbd.textContent
+  }
+
   document.getElementById('keyboard').addEventListener('mouseenter', ({ target }) => {
     if (target.tagName !== 'A') return false
 
@@ -59,6 +63,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!dl) return false
 
     kd.innerHTML = dl.innerHTML
+
+    const kbd = kd.querySelector(`kbd[data-key="${key}"]`)
+    if (kbd) kbd.style.backgroundColor = 'gold'
   }, true)
 })
 
@@ -66,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   const h2s = [...document.querySelectorAll('h2')]
-  h2s.forEach((h2, i) => {
+  h2s.forEach(h2 => {
     const span = document.createElement('span')
     span.textContent = h2.textContent
     h2.innerHTML = ''
