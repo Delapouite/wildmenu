@@ -383,6 +383,12 @@ arrows.push({
 <h2 id="d">d – delta</h2>
 
 <dl data-key="d">
+  <dt><kbd>d{motion}</kbd></dt>
+  <dd>delete {motion} move</dd>
+  <dt><kbd>dd</kbd></dt>
+  <dd>delete [count] lines (default current line)</dd>
+  <dt><kbd>D</kbd></dt>
+  <dd>delete [count] lines (same as <kbd>d$</kbd>)</dd>
   <dt><kbd>CTRL-d</kbd></dt>
   <dd>▿ scroll <a href="#down">down</a> half a window (opposite of <kbd>CTRL-u</kbd>)</dd>
 </dl>
@@ -440,6 +446,10 @@ arrows.push({
 <h2 id="f">f – foxtrot</h2>
 
 <dl data-key="f">
+  <dt><kbd>f</kbd>{char}</dt>
+  <dd>▸ move to [count]'th occurrence of {char} to the right</dd>
+  <dt><kbd>F</kbd>{char}</dt>
+  <dd>◂ move to [count]'th occurrence of {char} to the left</dd>
   <dt><kbd>CTRL-f</kbd></dt>
   <dd>▿ scroll [count] pages <a href="#down">down</a> (opposite <kbd>CTRL-b</kbd>)</dd>
 </dl>
@@ -698,6 +708,10 @@ arrows.push({
 <h2 id="t">t – tango</h2>
 
 <dl data-key="t">
+  <dt><kbd>t</kbd>{char}</dt>
+  <dd>▸ move till before [count]'th occurrence of {char} to the right</dd>
+  <dt><kbd>T</kbd>{char}</dt>
+  <dd>◂ move till before [count]'th occurrence of {char} to the left</dd>
   <dt><kbd>CTRL-t</kbd></dt>
   <dd>jump to N older Tag in tag list</dd>
 </dl>
@@ -757,6 +771,10 @@ arrows.push({
 <h2 id="u">u – uniform</h2>
 
 <dl data-key="u">
+  <dt><kbd>u</kbd></dt>
+  <dd>undo [count] changes</dd>
+  <dt><kbd>U</kbd></dt>
+  <dd>undo all latest changes on the line the lastest change was made</dd>
   <dt><kbd>CTRL-u</kbd></dt>
   <dd>▵ scroll <a href="#up">up</a> half a window (opposite <kbd>CTRL-d</kbd>)</dd>
 </dl>
@@ -810,6 +828,12 @@ arrows.push({
 <h2 id="y">y – yankee</h2>
 
 <dl data-key="y">
+  <dt><kbd>y</kbd>{motion}</dt>
+  <dd>yank (copy) {motion} text</dd>
+  <dt><kbd>yy</kbd></dt>
+  <dd>yank [count] lines (default current line)</dd>
+  <dt><kbd>Y</kbd></dt>
+  <dd>yank from cursor to end of line (same <kbd>y$</kbd>) (not by default)</dd>
   <dt><kbd>CTRL-y</kbd></dt>
   <dd>▵ scroll [count] lines <a href="#up">up</a> (opposite <kbd>CTRL-e</kbd>)</dd>
 </dl>
