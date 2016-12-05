@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>wildmenu - vim / neovim</title>
+  <title>wildmenu - lexicon to tame vim / neovim</title>
   <link href="css/index.css" rel="stylesheet">
   <link href="css/yarrow.css" rel="stylesheet">
   <link href="css/keyboard.css" rel="stylesheet">
@@ -17,7 +17,7 @@
 <body id="body-top">
 
 <header>
-  <h1>:wildmenu — a lexicon about vim / neovim</h1>
+  <h1>:wildmenu — lexicon to tame vim / neovim</h1>
   <p class="warning">The present page is still a work in progress. Please, consider it as a draft.</p>
   <nav class="nav-letters">
     <ul>
@@ -324,7 +324,7 @@
   <dt><kbd>B</kbd></dt>
   <dd>◂ move backwards to the beginning of the WORD</dd>
   <dt><kbd>CTRL-b</kbd></dt>
-  <dd>▵ scroll <a href="#up">up</a></dd>
+  <dd>▵ scroll [count] pages <a href="#up">up</a> (opposite <kbd>CTRL-f</kbd>)</dd>
 </dl>
 
 <article>
@@ -384,7 +384,7 @@ arrows.push({
 
 <dl data-key="d">
   <dt><kbd>CTRL-d</kbd></dt>
-  <dd>▿ scroll <a href="#down">down</a></dd>
+  <dd>▿ scroll <a href="#down">down</a> half a window (opposite of <kbd>CTRL-u</kbd>)</dd>
 </dl>
 
 <article>
@@ -430,7 +430,7 @@ arrows.push({
   <dt><kbd>gE</kbd></dt>
   <dd>◂ move backwards to the end of the WORD</dd>
   <dt><kbd>CTRL-e</kbd></dt>
-  <dd>▿ scroll <a href="#down">down</a></dd>
+  <dd>▿ scroll [count] lines <a href="#down">down</a> opposite <kbd>CTRL-y</kbd></dd>
 </dl>
 
 </section>
@@ -441,7 +441,7 @@ arrows.push({
 
 <dl data-key="f">
   <dt><kbd>CTRL-f</kbd></dt>
-  <dd>▿ scroll <a href="#down">down</a></dd>
+  <dd>▿ scroll [count] pages <a href="#down">down</a> (opposite <kbd>CTRL-b</kbd>)</dd>
 </dl>
 
 <article>
@@ -758,7 +758,7 @@ arrows.push({
 
 <dl data-key="u">
   <dt><kbd>CTRL-u</kbd></dt>
-  <dd>▵ scroll <a href="#up">up</a></dd>
+  <dd>▵ scroll <a href="#up">up</a> half a window (opposite <kbd>CTRL-d</kbd>)</dd>
 </dl>
 
 <article>
@@ -811,7 +811,7 @@ arrows.push({
 
 <dl data-key="y">
   <dt><kbd>CTRL-y</kbd></dt>
-  <dd>▵ scroll <a href="#up">up</a></dd>
+  <dd>▵ scroll [count] lines <a href="#up">up</a> (opposite <kbd>CTRL-e</kbd>)</dd>
 </dl>
 
 </section>
@@ -838,6 +838,8 @@ arrows.push({
 <dl data-key="single-quote">
   <dt><kbd>'{name}</kbd><dt>
   <dd>jump to the first non-blank char of line marked by {name}</dd>
+  <dt><kbd>CTRL-'</kbd><dt>
+  <dd>not used</dd>
 </dl>
 
 <article>
@@ -884,6 +886,8 @@ arrows.push({
 <dl data-key="back-quote">
   <dt><kbd>`{name}</kbd><dt>
   <dd>jump to the position marked by {name}</dd>
+  <dt><kbd>CTRL-`</kbd><dt>
+  <dd>not used</dd>
 </dl>
 
 <article>
@@ -951,8 +955,12 @@ arrows.push({
 <h2 id="percent-sign">% – percent-sign</h2>
 
 <dl data-key="percent-sign">
+  <dt><kbd>%</kbd></dt>
+  <dd>go to matching char (parenthesis, brackets…)</dd>
   <dt>{count}<kbd>%</kbd></dt>
   <dd>go to {count}percentage in the file</dd>
+  <dt><kbd>CTRL-%</kbd></dt>
+  <dd>not used</dd>
 </dl>
 
 </section>
@@ -960,6 +968,13 @@ arrows.push({
 
 <section>
 <h2 id="number-sign"># – number-sign</h2>
+
+<dl data-key="number-sign">
+  <dt><kbd>#</kbd></dt>
+  <dd>search backward for the id under the cursor</dd>
+  <dt><kbd>CTRL-#</kbd></dt>
+  <dd>not used</dd>
+</dl>
 
 <article>
 
