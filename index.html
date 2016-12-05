@@ -47,59 +47,72 @@
     </ul>
   </nav>
 </header>
+<div class="keyboard-filters">
+  <select>
+    <option value="all">Display all keys</option>
+    <optgroup label="Motions">
+      <option value="horizontal-motion">horizontal motions</option>
+      <option value="vertical-motion">vertical motions</option>
+      <option value="word-motion">word motions</option>
+      <option value="WORD-motion">WORD motions</option>
+    </optgroup>
+    <option value="jump">jumps</option>
+    <option value="mark">marks</option>
+  </select>
+</div>
 <div style="position: relative; margin: 0 auto; width: 664px;">
   <ul id="keyboard" class="pc104" style="clear: both;">
     <li id="row_AE">
       <ul>
-        <li id="key_TLDE">
+        <li id="key_TLDE" class="symbol">
           <strong> ~ </strong>
-          <em><a href="#back-quote"> ` </a></em>
+          <em class="mark jump"><a href="#back-quote">`</a></em>
         </li>
-        <li id="key_AE01">
+        <li id="key_AE01" class="number">
           <strong> ! </strong>
           <em> 1 </em>
         </li>
-        <li id="key_AE02">
+        <li id="key_AE02" class="number">
           <strong> @ </strong>
           <em> 2 </em>
         </li>
-        <li id="key_AE03">
-          <strong><a href="#number-sign"> # </a></strong>
+        <li id="key_AE03" class="number">
+          <strong><a href="#number-sign">#</a></strong>
           <em> 3 </em>
         </li>
-        <li id="key_AE04">
+        <li id="key_AE04" class="number">
           <strong> $ </strong>
           <em> 4 </em>
         </li>
-        <li id="key_AE05">
-          <strong><a href="#percent-sign"> % </a></strong>
+        <li id="key_AE05" class="number">
+          <strong class="jump"><a href="#percent-sign">%</a></strong>
           <em> 5 </em>
         </li>
-        <li id="key_AE06">
+        <li id="key_AE06" class="number">
           <strong> ^ </strong>
           <em> 6 </em>
         </li>
-        <li id="key_AE07">
+        <li id="key_AE07" class="number">
           <strong> &amp; </strong>
           <em> 7 </em>
         </li>
-        <li id="key_AE08">
+        <li id="key_AE08" class="number">
           <strong> * </strong>
           <em> 8 </em>
         </li>
-        <li id="key_AE09">
+        <li id="key_AE09" class="number">
           <strong> ( </strong>
           <em> 9 </em>
         </li>
-        <li id="key_AE10">
+        <li id="key_AE10" class="number">
           <strong> ) </strong>
           <em> 0 </em>
         </li>
-        <li id="key_AE11">
+        <li id="key_AE11" class="symbol">
           <strong> _ </strong>
           <em> - </em>
         </li>
-        <li id="key_AE12">
+        <li id="key_AE12" class="symbol">
           <strong> + </strong>
           <em> = </em>
         </li>
@@ -118,20 +131,20 @@
           <em> q </em>
         </li>
         <li id="key_AD02" class="letter">
-          <strong><a href="#w">W</a></strong>
-          <em><a href="#w">w</a></em>
+          <strong class="WORD-motion"><a href="#w">W</a></strong>
+          <em class="word-motion"><a href="#w">w</a></em>
         </li>
         <li id="key_AD03" class="letter">
-          <strong><a href="#e">E</a></strong>
-          <em><a href="#e">e</a></em>
+          <strong class="WORD-motion"><a href="#e">E</a></strong>
+          <em class="word-motion"><a href="#e">e</a></em>
         </li>
         <li id="key_AD04" class="letter">
           <strong> R </strong>
           <em> r </em>
         </li>
         <li id="key_AD05" class="letter">
-          <strong><a href="#t">T</a></strong>
-          <em><a href="#t">t</a></em>
+          <strong class="horizontal-motion"><a href="#t">T</a></strong>
+          <em class="horizontal-motion"><a href="#t">t</a></em>
         </li>
         <li id="key_AD06" class="letter">
           <strong><a href="#y">Y</a></strong>
@@ -153,15 +166,15 @@
           <strong> P </strong>
           <em> p </em>
         </li>
-        <li id="key_AD11" class="qwerty">
+        <li id="key_AD11" class="qwerty symbol">
           <strong> { </strong>
           <em> [ </em>
         </li>
-        <li id="key_AD12" class="qwerty">
+        <li id="key_AD12" class="qwerty symbol">
           <strong> } </strong>
           <em> ] </em>
         </li>
-        <li id="key_BKSL">
+        <li id="key_BKSL" class="symbol">
           <strong> | </strong>
           <em> \ </em>
         </li>
@@ -188,36 +201,36 @@
           <em><a href="#d">d</a></em>
         </li>
         <li id="key_AC04" class="letter">
-          <strong><a href="#f">F</a></strong>
-          <em><a href="#f">f</a></em>
+          <strong class="horizontal-motion"><a href="#f">F</a></strong>
+          <em class="horizontal-motion"><a href="#f">f</a></em>
         </li>
         <li id="key_AC05" class="letter">
-          <strong><a href="#g">G</a></strong>
+          <strong class="jump"><a href="#g">G</a></strong>
           <em><a href="#g">g</a></em>
         </li>
         <li id="key_AC06" class="letter">
-          <strong><a href="#h">H</a></strong>
-          <em><a href="#h">h</a></em>
+          <strong class="jump"><a href="#h">H</a></strong>
+          <em class="horizontal-motion"><a href="#h">h</a></em>
         </li>
         <li id="key_AC07" class="letter">
           <strong><a href="#j">J</a></strong>
-          <em><a href="#j">j</a></em>
+          <em class="vertical-motion"><a href="#j">j</a></em>
         </li>
         <li id="key_AC08" class="letter">
           <strong><a href="#k">K</a></strong>
-          <em><a href="#k">k</a></em>
+          <em class="vertical-motion"><a href="#k">k</a></em>
         </li>
         <li id="key_AC09" class="letter">
-          <strong><a href="#l">L</a></strong>
-          <em><a href="#l">l</a></em>
+          <strong class="jump"><a href="#l">L</a></strong>
+          <em class="horizontal-motion"><a href="#l">l</a></em>
         </li>
-        <li id="key_AC10" class="qwerty">
+        <li id="key_AC10" class="qwerty symbol">
           <strong> : </strong>
           <em> ; </em>
         </li>
-        <li id="key_AC11">
+        <li id="key_AC11" class="symbol">
           <strong> " </strong>
-          <em><a href="#single-quote"> ' </a></em>
+          <em class="mark jump"><a href="#single-quote">'</a></em>
         </li>
         <li id="key_RTRN" class="specialKey">
           <em> return </em>
@@ -253,26 +266,26 @@
           <em> v </em>
         </li>
         <li id="key_AB05" class="letter">
-          <strong><a href="#b">B</a></strong>
-          <em><a href="#b">b</a></em>
+          <strong class="WORD-motion"><a href="#b">B</a></strong>
+          <em class="word-motion"><a href="#b">b</a></em>
         </li>
         <li id="key_AB06" class="letter">
           <strong> N </strong>
           <em> n </em>
         </li>
         <li id="key_AB07" class="letter">
-          <strong><a href="#m">M</a></strong>
-          <em><a href="#m">m</a></em>
+          <strong class="jump"><a href="#m">M</a></strong>
+          <em class="mark"><a href="#m">m</a></em>
         </li>
-        <li id="key_AB08" class="qwerty">
+        <li id="key_AB08" class="qwerty symbol">
           <strong> &lt; </strong>
           <em> , </em>
         </li>
-        <li id="key_AB09" class="qwerty">
+        <li id="key_AB09" class="qwerty symbol">
           <strong> &gt; </strong>
           <em> . </em>
         </li>
-        <li id="key_AB10">
+        <li id="key_AB10" class="symbol">
           <strong> ? </strong>
           <em> / </em>
         </li>

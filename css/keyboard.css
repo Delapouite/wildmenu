@@ -22,9 +22,14 @@ ul#keyboard, ul#keyboard ul {
   width: 664px;
 }
 ul#keyboard {
-  margin: 20px auto;
+  margin: 2rem auto;
   position: relative;
   height: 230px;
+}
+
+.keyboard-filters {
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 

@@ -1,5 +1,9 @@
 /* global yarrow */
 
+// helpers
+const $ = document.querySelector.bind(document)
+const $$ = document.querySelectorAll.bind(document)
+
 // arrows
 
 const arrowStyles = {
@@ -48,19 +52,20 @@ const relatedKeysCtrl = [
 
 function toggleKeyboardCtrl () {
   keyboard.ctrl = !keyboard.ctrl
-  document.getElementById('keyboard').classList.toggle('ctrl')
+  $('#keyboard').classList.toggle('ctrl')
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   // selectors and more hints in page
-  const kd = document.getElementById('key-details')
-  const links = [...document.querySelectorAll('#keyboard a')]
-  for (let kbd of document.querySelectorAll('dl kbd')) {
+  const kd = $('#key-details')
+  const links = [...$$('#keyboard a')]
+  const keys = [].concat(...$$('.letter > *'), ...$$('.symbol > *'), ...$$('.number > *'))
+  for (let kbd of $$('dl kbd')) {
     kbd.dataset.key = kbd.textContent
   }
 
   // fill key-details with right info / colors
-  document.getElementById('keyboard').addEventListener('mouseenter', ({ target }) => {
+  $('#keyboard').addEventListener('mouseenter', ({ target }) => {
     if (target.tagName !== 'A') return false
 
     // clean
@@ -74,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     }
 
-    const dl = document.querySelector(`dl[data-key=${target.href.split('#')[1]}]`)
+    const dl = $(`dl[data-key=${target.href.split('#')[1]}]`)
     if (!dl) return false
 
     kd.innerHTML = dl.innerHTML
@@ -84,15 +89,24 @@ document.addEventListener('DOMContentLoaded', () => {
     if (kbd) kbd.style.backgroundColor = 'gold'
   }, true)
 
-  for (let ctrl of document.querySelectorAll('#keyboard .ctrl')) {
+  // ctrl keys toggling
+  for (let ctrl of $$('#keyboard .ctrl')) {
     ctrl.addEventListener('click', toggleKeyboardCtrl)
   }
+
+  $('.keyboard-filters select').addEventListener('change', ({ target }) => {
+    keys.forEach(key => {
+      key.style.visibility = target.value === 'all' || key.classList.contains(target.value)
+        ? 'visible'
+        : 'hidden'
+    })
+  })
 })
 
 // nav between sections
 
 document.addEventListener('DOMContentLoaded', () => {
-  const h2s = [...document.querySelectorAll('h2')]
+  const h2s = [...$$('h2')]
   h2s.forEach(h2 => {
     const span = document.createElement('span')
     span.textContent = h2.textContent
