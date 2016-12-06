@@ -43,11 +43,15 @@ const relatedKeys = [
   ['b', 'e', 'w'],
   ['B', 'E', 'W'],
   ['t', 'f', 'T', 'F', ';', ','],
+  ['a', 'i'],
+  ['A', 'I'],
 ]
 
 const relatedKeysCtrl = [
   ['b', 'u', 'y'],
   ['d', 'e', 'f'],
+  ['a', 'x'],
+  ['i', 'o'],
 ]
 
 function toggleKeyboardCtrl () {
