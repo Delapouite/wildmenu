@@ -21,6 +21,7 @@
   <p class="warning">The present page is still a work in progress. Please, consider it as a draft.</p>
   <nav class="nav-letters">
     <ul>
+      <li><a href="#a" title="letter a">a</a></li>
       <li><a href="#b" title="letter b">b</a></li>
       <li><a href="#d" title="letter d">d</a></li>
       <li><a href="#e" title="letter e">e</a></li>
@@ -191,8 +192,8 @@
            
         </li>
         <li id="key_AC01" class="letter">
-          <strong> A </strong>
-          <em> a </em>
+          <strong><a href="#a">A</a></strong>
+          <em><a href="#a">a</a></em>
         </li>
         <li id="key_AC02" class="letter">
           <strong> S </strong>
@@ -329,6 +330,43 @@
 <dl id="key-details"></dl>
 
 <main>
+
+<section>
+<h2 id="a">a – alpha</h2>
+
+<dl data-key="a">
+  <dt><kbd>a</kbd></dt>
+  <dd>append text after cursor [count] times</dd>
+  <dt><kbd>A</kbd></dt>
+  <dd>append text at the end of line [count] times</dd>
+  <dt><kbd>ga</kbd></dt>
+  <dd>print <a href="#ascii">ascii</a> value of char under cursor</dd>
+  <dt><kbd>CTRL-a</kbd></dt>
+  <dd>increment number</dd>
+</dl>
+
+<article>
+
+<article>
+
+<header>
+  <h3 id="ascii">ASCII</h3>
+  <kbd>ga</kbd>
+</header>
+
+<p>Dealing with text encoding is always a lot of fun, isn't it? If you answered a big "NO", the following tip might save you ass one day.</p>
+<p>I once stumbled upon a condition almost like this one <code>"hérésie" == "hérésie"</code> and had a very hard time figuring out why this code returned <code>false</code>.</p>
+<p>Every time you have to handle words in foreign locales, especially when it comes from another platform, you immediately suspect something might goes wrong. And in this scenario the <code>é</code> was indeed the culprit.</p>
+<p>Your eyes can't really help you to unveil the fallacy. You must inspect the ASCII code with powerful tools. Like <kbd>ga</kbd></p>
+<p>By using this shortcut for <cmd>ascii</cmd> on the <code>é</code> chars on the left hand side nothing weird was printed : <code><é> 233, Hex 00e9, Octal 351</code>.</p>
+<p>However, <kbd>ga</kbd> printed me another story for the ones on the right hand side: <code>&lt;e&gt; 101, Hex 65, Octal 145 < > 769, Hex 0301, Octal 1401.</code></p>
+<p>So while the first occurrences where legit <code>é</code>, the other ones where composed chars from a normal <kbd>e</kbd> combined with an acute accent!</p>
+
+</article>
+</article>
+
+</section>
+
 
 <section>
 <h2 id="b">b – bravo</h2>
@@ -497,7 +535,7 @@ arrows.push({
   <dt><kbd>G</kbd></dt>
   <dd>jump to the end of the buffer</dd>
   <dt><kbd>CTRL-g</kbd></dt>
-  <dd>print info about current file (same as <cmd>:file</cmd>)</dd>
+  <dd>print info about current file (same as <cmd>file</cmd>)</dd>
 </dl>
 
 </section>
