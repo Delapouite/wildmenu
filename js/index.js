@@ -54,9 +54,10 @@ const relatedKeysCtrl = [
   ['i', 'o'],
 ]
 
-function toggleKeyboardCtrl () {
-  keyboard.ctrl = !keyboard.ctrl
-  $('#keyboard').classList.toggle('ctrl')
+function toggleKeyboardCtrl (force) {
+  keyboard.ctrl = force === true || force === false
+    ? force : !keyboard.ctrl
+  $('#keyboard').classList.toggle('ctrl', keyboard.ctrl)
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -99,6 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   $('.keyboard-filters select').addEventListener('change', ({ target }) => {
+    toggleKeyboardCtrl(target.value.startsWith('ctrl'))
     keys.forEach(key => {
       key.style.visibility = target.value === 'all' || key.classList.contains(target.value)
         ? 'visible'
