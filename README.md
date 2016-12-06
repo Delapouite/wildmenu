@@ -1,6 +1,6 @@
 # wildmenu
 
-:wildmenu — a lexicon about vim / neovim
+:wildmenu — a lexicon to tame vim / neovim
 
 **Work in progress**. Pull requests will not be accepted at this point of the project.
 

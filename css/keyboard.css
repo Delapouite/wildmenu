@@ -4,16 +4,32 @@
 
 ul#keyboard a {
   display: inline-block;
+  padding-left: 4px;
   text-decoration: none;
-  width: 30px;
+  width: 100%;
 }
 
-ul#keyboard a:hover,
-ul#keyboard a.related:hover {
+/**/
+ul#keyboard a:not([href]) {
+  color: #888;
+}
+
+ul#keyboard a[href]:hover,
+ul#keyboard a[href].related:hover {
   background: gold;
 }
 ul#keyboard a.related  {
   background: #ffed8e; /* less gold */
+}
+
+ul#keyboard strong a {
+  border-radius: 5px 5px 0 0;
+  padding-top: 1px;
+}
+
+ul#keyboard em a {
+  border-radius: 0 0 5px 5px;
+  padding-bottom: 1px;
 }
 
 ul#keyboard, ul#keyboard ul {
@@ -78,9 +94,6 @@ ul#keyboard li strong {
   top: 0;
   left: 0;
   right: 0;
-  padding-left: 4px;
-  padding-top: 1px;
-  border-radius: 5px;
 }
 ul#keyboard li em {
   position: absolute;
@@ -88,9 +101,6 @@ ul#keyboard li em {
   bottom: 0;
   left: 0;
   right: 0;
-  padding-left: 4px;
-  padding-bottom: 1px;
-  border-radius: 5px;
 }
 ul#keyboard li .deadKey {
   font-size: larger;
@@ -101,9 +111,12 @@ ul#keyboard li .deadKey {
 ul#keyboard li.specialKey {
   background-color: #eee;
 }
-ul#keyboard li.specialKey * {
+ul#keyboard li.specialKey *,
+ul#keyboard li#key_SPCE * {
   font-size: 13px;
   font-style: italic;
+  padding-left: 4px;
+  padding-bottom: 1px;
 }
 li#row_AA li.specialKey {
   width: 55px;
