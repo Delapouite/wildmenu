@@ -43,9 +43,9 @@ const relatedKeys = [
   ['b', 'e', 'w'],
   ['B', 'E', 'W'],
   ['t', 'f', 'T', 'F', ';', ','],
-  ['a', 'i'],
+  ['a', 'i', 'c', 'C'],
   ['A', 'I'],
-  ['d', 'x', 'D', 'X'],
+  ['d', 'x', 'c', 'D', 'X', 'C'],
 ]
 
 const relatedKeysCtrl = [
