@@ -43,9 +43,9 @@ const relatedKeys = [
   ['b', 'e', 'w'],
   ['B', 'E', 'W'],
   ['t', 'f', 'T', 'F', ';', ','],
-  ['a', 'i', 'c', 'C'],
-  ['A', 'I'],
+  ['a', 'i', 'c', 'o', 'A', 'I', 'C', 'O'],
   ['d', 'x', 'c', 'D', 'X', 'C'],
+  ['p', 'y', 'P', 'Y', '"']
 ]
 
 const relatedKeysCtrl = [
@@ -53,6 +53,7 @@ const relatedKeysCtrl = [
   ['d', 'e', 'f'],
   ['a', 'x'],
   ['i', 'o'],
+  ['j', 'n', 'p']
 ]
 
 function toggleKeyboardCtrl (force) {
