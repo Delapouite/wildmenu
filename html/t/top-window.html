@@ -1,0 +1,36 @@
+<article>
+
+<header>
+  <h3 id="top-window">top of window</h3>
+  <kbd>H</kbd>
+  <a class="user-guide" href="https://neovim.io/doc/user/motion.html#H">see window-motions in the user-guide</a>
+</header>
+
+<p>Press <kbd>H</kbd> to jump to the top of the current window, on the first non-blank character. See also: <a href="#middle">middle</a> and <a href="#bottom-window">bottom</a></p>
+<pre><code>
+  <target id="top-t">F</target>irst line visible in the window
+Dummy line
+
+A random line down with <cursor id="top-c">c</cursor>ursor
+Dummy line
+</code></pre>
+<script>
+arrows.push({
+  source: '#top-c',
+  target: '#top-t',
+  x1: s.l, y1: s.t, x2: t.r, y2: t.b,
+  text: "H",
+  textStartOffset: 50,
+  textReverseDirection: true,
+})
+</script>
+
+<p>A few ways to remember the <kbd>H</kbd> key:
+<ul>
+  <li>Header</li>
+  <li><em>High</em>, Medium, Low</li>
+  <li>Think of the well known HJKL arrows and rotate them by 90° (yes seriously) </li>
+</ul>
+
+</article>
+

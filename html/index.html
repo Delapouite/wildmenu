@@ -24,11 +24,7 @@
   <dd>increment number (opposite <kbd>CTRL-x</kbd>)</dd>
 </dl>
 
-<article>
-
 <include src="a/ascii.html">
-</article>
-
 </section>
 
 
@@ -44,55 +40,8 @@
   <dd>▵ scroll [count] pages <a href="#up">up</a> (opposite <kbd>CTRL-f</kbd>)</dd>
 </dl>
 
-<article>
-
-<header>
-  <h3 id="bottom-window">bottom of window</h3>
-  <kbd>L</kbd>
-  <a class="user-guide" href="https://neovim.io/doc/user/motion.html#L">see window-motions in the user-guide</a>
-</header>
-
-<p>Press <kbd>L</kbd> to jump to the bottom of the current window, on the first non-blank character. See also: <a href="#middle">middle</a> and <a href="#top-window">top</a></p>
-<pre><code>
-First dummy line
-
-A random line down below with <cursor id="bottom-c">c</cursor>ursor
-
-
-Dummy line
-  <target id="bottom-t">L</target>ast line visible in the window
-</code></pre>
-<script>
-arrows.push({
-  source: '#bottom-c',
-  target: '#bottom-t',
-  x1: s.l, y1: s.b, x2: t.r, y2: t.t,
-  text: "L",
-  textStartOffset: 100,
-  textReverseDirection: true,
-})
-</script>
-
-<p>Various ways to remember the <kbd>L</kbd> key:
-<ul>
-  <li>High, Medium, <em>Low</em></li>
-  <li>Think of the well known HJKL arrows and rotate them by 90° (no joke) </li>
-</ul>
-
-</article>
-
-<article>
-
-<header>
-  <h3 id="bottom-buffer">bottom of buffer</h3>
-  <kbd>G</kbd>
-  <a class="user-guide" href="https://neovim.io/doc/user/motion.html#up-down-motions">see up-down motions in the user-guide</a>
-</header>
-
-<p>In a very long buffer, no need to hop down from paragraph to paragraph to reach the end! Pressing <kbd>G</kbd> leads you right there.</p>
-
-</article>
-
+<include src="b/bottom-window.html">
+<include src="b/bottom-buffer.html">
 </section>
 
 
@@ -110,33 +59,7 @@ arrows.push({
   <dd>▿ scroll <a href="#down">down</a> half a window (opposite of <kbd>CTRL-u</kbd>)</dd>
 </dl>
 
-<article>
-
-<header>
-  <h3 id="down">down</h3>
-  <kbd>CTRL-d</kbd>
-  <kbd>CTRL-e</kbd>
-  <kbd>CTRL-f</kbd>
-  <a class="user-guide" href="https://neovim.io/doc/user/scroll.html#scroll-down">see scroll in the user-guide</a>
-</header>
-
-<p>The <kbd>⇟ Page Down</kbd> key is often hard to reach without leaving the <a href="#home-row">home row</a> or even absent on some laptop keyboards.</p>
-<p>To scroll the window downwards, here are a few other chords:<p>
-
-<ul>
-  <li><kbd>CTRL-f</kbd> → down a full screen</li>
-  <li><kbd>CTRL-d</kbd> → down a half screen</li>
-  <li><kbd>CTRL-e</kbd> → down the number of lines you specified as count</li>
-</ul>
-
-<p>This triad is composed of 3 consecutive letters so it's an easy way to remember them.</p>
-
-<p>Guess how to go <a href="#up">the opposite direction</a>.</p>
-
-<p>If you want to go down, you may be diving to the bottom! See how to jump to the <a href="#bottom-window">bottom of the window</a> and the <a href="#bottom-buffer">bottom of the buffer</a>.</p>
-
-</article>
-
+<include src="d/down.html">
 </section>
 
 
@@ -171,19 +94,7 @@ arrows.push({
   <dd>▿ scroll [count] pages <a href="#down">down</a> (opposite <kbd>CTRL-b</kbd>)</dd>
 </dl>
 
-<article>
-
-<header>
-  <h3 id="fold">fold</h3>
-  <kbd>z</kbd>
-  <a class="user-guide" href="https://neovim.io/doc/user/fold.html#Folding">see fold in the user-guide</a>
-</header>
-
-<p>Observe closely the shape of the <em>z</em> letter. Yes, it looks like a sheet of paper folding on itself.</p>
-<p>Many commands associated to the <kbd>z</kbd> key deal with contracting / expanding regions of text. Folds can be nested: this emphasizes the hierarchy of your documents.</p>
-
-</article>
-
+<include src="f/fold.html">
 </section>
 
 
@@ -217,17 +128,7 @@ arrows.push({
   <dd>◂ move [count] chars to the left (same as <kbd>h</kbd>)</dd>
 </dl>
 
-<article>
-
-<header>
-  <h3 id="home-row">home row</h3>
-</header>
-
-<p>Did you notice the little bumps under your fingers when they rest on the <kbd>f</kbd> and <kbd>j</kbd> keys? They are tactile hints indicating the natural position of your hands on a keyboard.</p>
-<p>The more you stay around this area, the more you optimize your hands moves which results in an increased productivity and less pain to your wrists. There's no need to reach for the mouse at the other side of your desk when quicker strategies let you teleport in the file where you need to work.</p>
-
-</article>
-
+<include src="h/home-row.html">
 </section>
 
 
@@ -256,20 +157,7 @@ arrows.push({
   <dd>▾ move [count] lines downward (same as <kbd>j</kbd>)</dd>
 </dl>
 
-<article>
-
-<header>
-  <h3 id="jump">jump</h3>
-</header>
-
-<p>What's the difference between a move and jump you may ask? Is jumping implies a more ample movement? Yes in a sense. But the distinctive feature which makes jumps useful is that they are recorded in the jumplist.</p>
-
-<p>The current jumplist is displayed with <cmd>jumps</cmd>. It feels like a log of your recent itinerary produced by a GPS.</p>
-
-<p>To move up and down this list: <kbd>CTRL-o</kbd> (out) and <kbd>CTRL-i</kbd> (in)</p>
-
-</article>
-
+<include src="j/jump.html">
 </section>
 
 
@@ -331,54 +219,8 @@ arrows.push({
   <dd>jump to N older Tag in tag list</dd>
 </dl>
 
-<article>
-
-<header>
-  <h3 id="top-window">top of window</h3>
-  <kbd>H</kbd>
-  <a class="user-guide" href="https://neovim.io/doc/user/motion.html#H">see window-motions in the user-guide</a>
-</header>
-
-<p>Press <kbd>H</kbd> to jump to the top of the current window, on the first non-blank character. See also: <a href="#middle">middle</a> and <a href="#bottom-window">bottom</a></p>
-<pre><code>
-  <target id="top-t">F</target>irst line visible in the window
-Dummy line
-
-A random line down with <cursor id="top-c">c</cursor>ursor
-Dummy line
-</code></pre>
-<script>
-arrows.push({
-  source: '#top-c',
-  target: '#top-t',
-  x1: s.l, y1: s.t, x2: t.r, y2: t.b,
-  text: "H",
-  textStartOffset: 50,
-  textReverseDirection: true,
-})
-</script>
-
-<p>A few ways to remember the <kbd>H</kbd> key:
-<ul>
-  <li>Header</li>
-  <li><em>High</em>, Medium, Low</li>
-  <li>Think of the well known HJKL arrows and rotate them by 90° (yes seriously) </li>
-</ul>
-
-</article>
-
-<article>
-
-<header>
-  <h3 id="top-buffer">top of buffer</h3>
-  <kbd>gg</kbd>
-  <a class="user-guide" href="https://neovim.io/doc/user/motion.html#up-down-motions">see up-down motions in the user-guide</a>
-</header>
-
-</article>
-
-<p>You're deep in a file and already miss the first line of the buffer? <kbd>gg</kbd>, that is double g like in <em>Good Game</em> is your high speed ticket.</p>
-
+<include src="t/top-window.html">
+<include src="t/top-buffer.html">
 </section>
 
 
@@ -394,33 +236,7 @@ arrows.push({
   <dd>▵ scroll <a href="#up">up</a> half a window (opposite <kbd>CTRL-d</kbd>)</dd>
 </dl>
 
-<article>
-
-<header>
-  <h3 id="up">up</h3>
-  <kbd>CTRL-b</kbd>
-  <kbd>CTRL-u</kbd>
-  <kbd>CTRL-y</kbd>
-  <a class="user-guide" href="https://neovim.io/doc/user/scroll.html#scroll-up">see scroll in the user-guide</a>
-</header>
-
-<p>The <kbd>⇞ Page Up</kbd> key is often too far away from the <a href="#home-row">home row</a> or even absent on exotic keyboards.</p>
-<p>To scroll the window upwards, here are a few other combos:<p>
-
-<ul>
-  <li><kbd>CTRL-b</kbd> → up a full screen</li>
-  <li><kbd>CTRL-u</kbd> → up a half screen</li>
-  <li><kbd>CTRL-y</kbd> → up the number of lines you specified as count</li>
-</ul>
-
-<p>This trio forms the mnemonic word <em>buy</em>.</p>
-
-<p>Discover how to go <a href="#down">the opposite direction</a>.</p>
-
-<p>If you need to go up, you may be aiming for the top! See how to jump to the <a href="#top-window">top of the window</a> and the <a href="#top-buffer">top of the buffer</a>.</p>
-
-</article>
-
+<include src="u/up.html">
 </section>
 
 

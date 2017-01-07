@@ -1,0 +1,36 @@
+<article>
+
+<header>
+  <h3 id="bottom-window">bottom of window</h3>
+  <kbd>L</kbd>
+  <a class="user-guide" href="https://neovim.io/doc/user/motion.html#L">see window-motions in the user-guide</a>
+</header>
+
+<p>Press <kbd>L</kbd> to jump to the bottom of the current window, on the first non-blank character. See also: <a href="#middle">middle</a> and <a href="#top-window">top</a></p>
+<pre><code>
+First dummy line
+
+A random line down below with <cursor id="bottom-c">c</cursor>ursor
+
+
+Dummy line
+  <target id="bottom-t">L</target>ast line visible in the window
+</code></pre>
+<script>
+arrows.push({
+  source: '#bottom-c',
+  target: '#bottom-t',
+  x1: s.l, y1: s.b, x2: t.r, y2: t.t,
+  text: "L",
+  textStartOffset: 100,
+  textReverseDirection: true,
+})
+</script>
+
+<p>Various ways to remember the <kbd>L</kbd> key:
+<ul>
+  <li>High, Medium, <em>Low</em></li>
+  <li>Think of the well known HJKL arrows and rotate them by 90° (no joke) </li>
+</ul>
+
+</article>
