@@ -52,6 +52,7 @@
   <nav class="nav-symbols">
     <ul>
       <li><a href="#single-quote" title="symbol ' (single-quote)">'</a></li>
+      <li><a href="#double-quote" title='symbol " (double-quote)'>"</a></li>
       <li><a href="#back-quote" title="symbol ` (back-quote)">`</a></li>
       <li><a href="#number-sign" title="symbol # (number-sign)">#</a></li>
       <li><a href="#dollar-sign" title="symbol $ (dollar-sign)">$</a></li>
@@ -120,7 +121,7 @@
         </li>
         <li id="key_AE10" class="number">
           <strong><a>)<a></strong>
-          <em><a>0</a></em>
+          <em class="horizontal-motion"><a>0</a></em>
         </li>
         <li id="key_AE11" class="symbol">
           <strong><a>_</a></strong>
@@ -243,7 +244,7 @@
           <em><a>;</a></em>
         </li>
         <li id="key_AC11" class="symbol">
-          <strong><a>"</a></strong>
+          <strong><a href='#"'>"</a></strong>
           <em class="mark jump"><a href="#single-quote">'</a></em>
         </li>
         <li id="key_RTRN" class="specialKey">
@@ -445,6 +446,8 @@ arrows.push({
 <dl data-key="c">
   <dt><kbd>c</kbd></dt>
   <dd>delete {motion} move and start insert</dd>
+  <dt><kbd>cc</kbd></dt>
+  <dd>delete [count] lines and start insert</dd>
   <dt><kbd>C</kbd></dt>
   <dd>delete from cursor to end of line and start insert</dd>
   <dt><kbd>CTRL-c</kbd></dt>
@@ -458,7 +461,7 @@ arrows.push({
 <h2 id="d">d – delta</h2>
 
 <dl data-key="d">
-  <dt><kbd>d{motion}</kbd></dt>
+  <dt><kbd>d</kbd>{motion}</dt>
   <dd>delete {motion} move</dd>
   <dt><kbd>dd</kbd></dt>
   <dd>delete [count] lines (default current line)</dd>
@@ -859,8 +862,12 @@ arrows.push({
 <dl data-key="r">
   <dt><kbd>r</kbd>{char}</dt>
   <dd>replace char under cursor with {char}</dd>
+  <dt><kbd>gr</kbd></dt>
+  <dd>replace virtual char under cursor with {char}</dd>
   <dt><kbd>R</kbd></dt>
   <dd>enter replace mode</dd>
+  <dt><kbd>gR</kbd></dt>
+  <dd>enter virtual replace mode</dd>
 </dl>
 
 </section>
@@ -1109,10 +1116,21 @@ arrows.push({
 
 
 <section>
+<h2 id="double-quote">" – double-quote</h2>
+
+<dl data-key="double-quote">
+  <dt><kbd>"</kbd>{name}<dt>
+  <dd>use register {name} for next operation</dd>
+</dl>
+
+</section>
+
+
+<section>
 <h2 id="back-quote">` – back-quote</h2>
 
 <dl data-key="back-quote">
-  <dt><kbd>`{name}</kbd><dt>
+  <dt><kbd>`</kbd>{name}<dt>
   <dd>jump to the position marked by {name}</dd>
   <dt><kbd>CTRL-`</kbd><dt>
   <dd>not used</dd>
