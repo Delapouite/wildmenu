@@ -54,11 +54,15 @@
       <li><a href="#single-quote" title="symbol ' (single-quote)">'</a></li>
       <li><a href="#double-quote" title='symbol " (double-quote)'>"</a></li>
       <li><a href="#back-quote" title="symbol ` (back-quote)">`</a></li>
+      <li><a href="#exclamation-mark" title="symbol ! (exclamation-mark)">!</a></li>
+      <li><a href="#titde" title="symbol ~ (tilde)">~</a></li>
       <li><a href="#at-sign" title="symbol @ (at-sign)">@</a></li>
       <li><a href="#number-sign" title="symbol # (number-sign)">#</a></li>
-      <li><a href="#dollar-sign" title="symbol $ (dollar-sign)">$</a></li>
-      <li><a href="#percent-sign" title="symbol % (percent-sign)">%</a></li>
-      <li><a href="#caret-sign" title="symbol ^ (caret-sign)">^</a></li>
+      <li><a href="#dollar" title="symbol $ (dollar)">$</a></li>
+      <li><a href="#percent" title="symbol % (percent)">%</a></li>
+      <li><a href="#caret" title="symbol ^ (caret)">^</a></li>
+      <li><a href="#ampersand" title="symbol & (ampersand)">&</a></li>
+      <li><a href="#star" title="symbol * (star)">*</a></li>
     </ul>
   </nav>
 </header>
@@ -82,11 +86,11 @@
     <li id="row_AE">
       <ul>
         <li id="key_TLDE" class="symbol">
-          <strong><a>~</a></strong>
+          <strong><a href="#tilde">~</a></strong>
           <em class="mark jump"><a href="#back-quote">`</a></em>
         </li>
         <li id="key_AE01" class="number">
-          <strong><a>!</a></strong>
+          <strong><a href="#exclamation-mark">!</a></strong>
           <em><a>1</a></em>
         </li>
         <li id="key_AE02" class="number">
@@ -98,23 +102,23 @@
           <em><a>3</a></em>
         </li>
         <li id="key_AE04" class="number">
-          <strong class="horizontal-motion"><a href="#dollar-sign">$</a></strong>
+          <strong class="horizontal-motion"><a href="#dollar">$</a></strong>
           <em><a>4</a></em>
         </li>
         <li id="key_AE05" class="number">
-          <strong class="jump"><a href="#percent-sign">%</a></strong>
+          <strong class="jump"><a href="#percent">%</a></strong>
           <em><a>5</a></em>
         </li>
         <li id="key_AE06" class="number">
-          <strong class="horizontal-motion"><a href="#caret-sign">^</a></strong>
+          <strong class="horizontal-motion"><a href="#caret">^</a></strong>
           <em><a>6</a></em>
         </li>
         <li id="key_AE07" class="number">
-          <strong><a>&amp;</a></strong>
+          <strong><a href="#ampersand">&</a></strong>
           <em><a>7</a></em>
         </li>
         <li id="key_AE08" class="number">
-          <strong><a>*</a></strong>
+          <strong><a href="#star">*</a></strong>
           <em><a>8</a></em>
         </li>
         <li id="key_AE09" class="number">
@@ -352,7 +356,7 @@
   <dt><kbd>a</kbd></dt>
   <dd>append text after cursor [count] times</dd>
   <dt><kbd>A</kbd></dt>
-  <dd>append text at the end of line [count] times</dd>
+  <dd>append text at end of line [count] times</dd>
   <dt><kbd>ga</kbd></dt>
   <dd>print <a href="#ascii">ascii</a> value of char under cursor</dd>
   <dt><kbd>CTRL-a</kbd></dt>
@@ -385,9 +389,9 @@
 
 <dl data-key="b">
   <dt><kbd>b</kbd></dt>
-  <dd>◂ move backwards to the beginning of the word</dd>
+  <dd>◂ move backwards to beginning of word</dd>
   <dt><kbd>B</kbd></dt>
-  <dd>◂ move backwards to the beginning of the WORD</dd>
+  <dd>◂ move backwards to beginning of WORD</dd>
   <dt><kbd>CTRL-b</kbd></dt>
   <dd>▵ scroll [count] pages <a href="#up">up</a> (opposite <kbd>CTRL-f</kbd>)</dd>
 </dl>
@@ -446,7 +450,7 @@ arrows.push({
 <h2 id="c">c – charlie</h2>
 
 <dl data-key="c">
-  <dt><kbd>c</kbd></dt>
+  <dt><kbd>c</kbd>{motion}</dt>
   <dd>delete {motion} move and start insert</dd>
   <dt><kbd>cc</kbd></dt>
   <dd>delete [count] lines and start insert</dd>
@@ -508,13 +512,13 @@ arrows.push({
 
 <dl data-key="e">
   <dt><kbd>e</kbd></dt>
-  <dd>▸ move forwards to the end of the word</dd>
+  <dd>▸ move forwards to end of word</dd>
   <dt><kbd>E</kbd></dt>
-  <dd>▸ move forwards to the end of the WORD</dd>
+  <dd>▸ move forwards to end of WORD</dd>
   <dt><kbd>ge</kbd></dt>
-  <dd>◂ move backwards to the end of the word</dd>
+  <dd>◂ move backwards to end of word</dd>
   <dt><kbd>gE</kbd></dt>
-  <dd>◂ move backwards to the end of the WORD</dd>
+  <dd>◂ move backwards to end of WORD</dd>
   <dt><kbd>CTRL-e</kbd></dt>
   <dd>▿ scroll [count] lines <a href="#down">down</a> opposite <kbd>CTRL-y</kbd></dd>
 </dl>
@@ -558,9 +562,9 @@ arrows.push({
   <dd>do nothing by itself but the key is easily accessible under the index finger.
     Therefore it's a handy prefix key for a mix-bag of other commands. See each respective letter to dive into this "secondary layout".</dd>
   <dt><kbd>gg</kbd></dt>
-  <dd>jump to the beginning of the buffer</dd>
+  <dd>jump to beginning of buffer</dd>
   <dt><kbd>G</kbd></dt>
-  <dd>jump to the end of the buffer</dd>
+  <dd>jump to end of buffer</dd>
   <dt><kbd>CTRL-g</kbd></dt>
   <dd>print info about current file (same as <cmd>file</cmd>)</dd>
 </dl>
@@ -575,7 +579,7 @@ arrows.push({
   <dt><kbd>h</kbd></dt>
   <dd>◂ move [count] chars to the left</dd>
   <dt><kbd>H</kbd></dt>
-  <dd>jump to the <a href="#top-window">top</a> of the window</dd>
+  <dd>jump to <a href="#top-window">top</a> of window</dd>
   <dt><kbd>CTRL-h</kbd></dt>
   <dd>◂ move [count] chars to the left (same as <kbd>h</kbd>)</dd>
 </dl>
@@ -656,7 +660,7 @@ arrows.push({
   <dt><kbd>l</kbd></dt>
   <dd>▸ move [count] chars to the right</dd>
   <dt><kbd>L</kbd></dt>
-  <dd>jump to the <a href="#bottom-window">bottom</a> of the window</dd>
+  <dd>jump to <a href="#bottom-window">bottom</a> of window</dd>
   <dt><kbd>CTRL-l</kbd></dt>
   <dd>redraw screen</dd>
 </dl>
@@ -668,10 +672,10 @@ arrows.push({
 <h2 id="m">m – mike</h2>
 
 <dl data-key="m">
-  <dt><kbd>m{name}</kbd></dt>
-  <dd>add a <a href="#mark">mark</a> {name} at the current position</dd>
+  <dt><kbd>m</kbd>{name}</dt>
+  <dd>add a <a href="#mark">mark</a> {name} at current position</dd>
   <dt><kbd>M</kbd></dt>
-  <dd>jump to the <a href="#middle-window">middle</a> of the window</dd>
+  <dd>jump to <a href="#middle-window">middle</a> of window</dd>
   <dt><kbd>CTRL-m</kbd></dt>
   <dd>▾ move [count] lines downward on first non-blank char</dd>
 </dl>
@@ -804,9 +808,9 @@ arrows.push({
 
 <dl data-key="n">
   <dt><kbd>n</kbd></dt>
-  <dd>repeat the latest search [count] times</dd>
+  <dd>repeat latest search [count] times</dd>
   <dt><kbd>n</kbd></dt>
-  <dd>repeat the latest search [count] times in opposite direction</dd>
+  <dd>repeat latest search [count] times in opposite direction</dd>
   <dt><kbd>CTRL-n</kbd></dt>
   <dd>▾ move [count] lines downward (same as <kbd>j</kbd>)</dd>
 </dl>
@@ -957,7 +961,7 @@ arrows.push({
   <dt><kbd>u</kbd></dt>
   <dd>undo [count] changes</dd>
   <dt><kbd>U</kbd></dt>
-  <dd>undo all latest changes on the line the lastest change was made</dd>
+  <dd>undo all latest changes on line the lastest change was made</dd>
   <dt><kbd>CTRL-u</kbd></dt>
   <dd>▵ scroll <a href="#up">up</a> half a window (opposite <kbd>CTRL-d</kbd>)</dd>
 </dl>
@@ -1012,9 +1016,9 @@ arrows.push({
 
 <dl data-key="w">
   <dt><kbd>w</kbd></dt>
-  <dd>▸ move forwards to the beginning of the word</dd>
+  <dd>▸ move forwards to beginning of word</dd>
   <dt><kbd>W</kbd></dt>
-  <dd>▸ move forwards to the beginning of the WORD</dd>
+  <dd>▸ move forwards to beginning of WORD</dd>
   <dt><kbd>CTRL-w</kbd></dt>
   <dd>prefix for window commands</dd>
 </dl>
@@ -1059,11 +1063,11 @@ arrows.push({
 
 <dl data-key="z">
   <dt><kbd>z</kbd><dt>
-  <dd>do nothing by itself. It's a prefix key for all the <a href="#fold">fold</a> related commands</dd>
+  <dd>do nothing by itself. It's a prefix key for all <a href="#fold">fold</a> related commands</dd>
   <dt><kbd>zz</kbd><dt>
-  <dd>redraw the current line at the <a href="#middle-window">middle of window</a></dd>
+  <dd>redraw current line at <a href="#middle-window">middle of window</a></dd>
   <dt><kbd>CTRL-z</kbd><dt>
-  <dd>suspend vim (the job is now in the background and your shell has the focus. use fg to get back)</dd>
+  <dd>suspend vim (the job is now in background and your shell has the focus. use fg to get back)</dd>
 </dl>
 
 </section>
@@ -1073,8 +1077,8 @@ arrows.push({
 <h2 id="single-quote">' – single-quote</h2>
 
 <dl data-key="single-quote">
-  <dt><kbd>'{name}</kbd><dt>
-  <dd>jump to the first non-blank char of line marked by {name}</dd>
+  <dt><kbd>'</kbd>{name}<dt>
+  <dd>jump to first non-blank char of line marked by {name}</dd>
   <dt><kbd>CTRL-'</kbd><dt>
   <dd>not used</dd>
 </dl>
@@ -1133,7 +1137,7 @@ arrows.push({
 
 <dl data-key="back-quote">
   <dt><kbd>`</kbd>{name}<dt>
-  <dd>jump to the position marked by {name}</dd>
+  <dd>jump to position marked by {name}</dd>
   <dt><kbd>CTRL-`</kbd><dt>
   <dd>not used</dd>
 </dl>
@@ -1200,6 +1204,28 @@ arrows.push({
 
 
 <section>
+<h2 id="tilde">~ – tilde</h2>
+
+<dl data-key="tilde">
+  <dt><kbd>~</kbd>{motion}</dt>
+  <dd>switch case of {motion} text</dd>
+</dl>
+
+</section>
+
+
+<section>
+<h2 id="exclamation-mark">! – exclamation-mark</h2>
+
+<dl data-key="exclamation-mark">
+  <dt><kbd>!</kbd>{motion}{filter}</dt>
+  <dd>filter {motion} text lines through external program {filter}</dd>
+</dl>
+
+</section>
+
+
+<section>
 <h2 id="at-sign">@ – at-sign</h2>
 
 <dl data-key="at-sign">
@@ -1215,7 +1241,7 @@ arrows.push({
 
 <dl data-key="number-sign">
   <dt><kbd>#</kbd></dt>
-  <dd>search backward for the id under the cursor</dd>
+  <dd>search backward for id under cursor</dd>
   <dt><kbd>CTRL-#</kbd></dt>
   <dd>not used</dd>
 </dl>
@@ -1244,11 +1270,11 @@ arrows.push({
 
 
 <section>
-<h2 id="dollar-sign">$ – dollar-sign</h2>
+<h2 id="dollar">$ – dollar</h2>
 
-<dl data-key="dollar-sign">
+<dl data-key="dollar">
   <dt><kbd>$</kbd></dt>
-  <dd>▸ move to the end of line</dd>
+  <dd>▸ move to end of line</dd>
   <dt><kbd>CTRL-$</kbd></dt>
   <dd>not used</dd>
 </dl>
@@ -1257,13 +1283,13 @@ arrows.push({
 
 
 <section>
-<h2 id="percent-sign">% – percent-sign</h2>
+<h2 id="percent">% – percent</h2>
 
-<dl data-key="percent-sign">
+<dl data-key="percent">
   <dt><kbd>%</kbd></dt>
   <dd>go to matching char (parenthesis, brackets…)</dd>
   <dt>{count}<kbd>%</kbd></dt>
-  <dd>go to {count}percentage in the file</dd>
+  <dd>go to {count}percentage in file</dd>
   <dt><kbd>CTRL-%</kbd></dt>
   <dd>not used</dd>
 </dl>
@@ -1272,13 +1298,35 @@ arrows.push({
 
 
 <section>
-<h2 id="caret-sign">^ – caret-sign</h2>
+<h2 id="caret">^ – caret</h2>
 
-<dl data-key="caret-sign">
+<dl data-key="caret">
   <dt><kbd>^</kbd></dt>
   <dd>◂ move to first non blank char</dd>
   <dt><kbd>CTRL-^</kbd></dt>
-  <dd>edit the alternate file</dd>
+  <dd>edit alternate file</dd>
+</dl>
+
+</section>
+
+
+<section>
+<h2 id="ampersand">& – ampersand</h2>
+
+<dl data-key="ampersand">
+  <dt><kbd>&</kbd></dt>
+  <dd>repeat last substitute commmand</dd>
+</dl>
+
+</section>
+
+
+<section>
+<h2 id="star">* – star</h2>
+
+<dl data-key="star">
+  <dt><kbd>*</kbd></dt>
+  <dd>search for id under cursor</dd>
 </dl>
 
 </section>
