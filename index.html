@@ -67,6 +67,8 @@
       <li><a href="#semicolon" title="symbol ; (semicolon)">:</a></li>
       <li><a href="#comma" title="symbol , (comma)">,</a></li>
       <li><a href="#period" title="symbol . (period)">.</a></li>
+      <li><a href="#backslash" title="symbol \ (backslash)">\</a></li>
+      <li><a href="#pipe" title="symbol | (backslash)">|</a></li>
       <li><a href="#slash" title="symbol / (slash)">/</a></li>
       <li><a href="#question-mark" title="symbol ? (question-mark)">?</a></li>
       <li><a href="#left-chevron" title="symbol < (left-chevron)">&lt;</a></li>
@@ -80,6 +82,7 @@
       <li><a href="#plus" title="symbol + (plus)">+</a></li>
       <li><a href="#minus" title="symbol - (minus)">-</a></li>
       <li><a href="#underscore" title="symbol _ (underscore)">_</a></li>
+      <li><a href="#equals-sign" title="symbol = (equals-sign)">=</a></li>
     </ul>
   </nav>
 </header>
@@ -152,7 +155,7 @@
         </li>
         <li id="key_AE12" class="symbol">
           <strong><a href="#plus">+</a></strong>
-          <em><a>=</a></em>
+          <em><a href="#equals-sign">=</a></em>
         </li>
         <li id="key_BKSP" class="specialKey">
           <em> bksp </em>
@@ -213,8 +216,8 @@
           <em><a href="#right-bracket">]</a></em>
         </li>
         <li id="key_BKSL" class="symbol">
-          <strong><a>|</a></strong>
-          <em><a>\</a></em>
+          <strong><a href="#pipe">|</a></strong>
+          <em><a href="#backslash">\</a></em>
         </li>
       </ul>
     </li>
@@ -1394,6 +1397,28 @@ arrows.push({
 
 
 <section>
+<h2 id="backslash">\ – backslash</h2>
+
+<dl data-key="backslash">
+  <dt><kbd>\</kbd></dt>
+  <dd>not used</dd>
+</dl>
+
+</section>
+
+
+<section>
+<h2 id="pipe">| – pipe</h2>
+
+<dl data-key="pipe">
+  <dt><kbd>|</kbd></dt>
+  <dd>move to screen column [count] in current line</dd>
+</dl>
+
+</section>
+
+
+<section>
 <h2 id="slash">/ – slash</h2>
 
 <dl data-key="slash">
@@ -1530,11 +1555,22 @@ arrows.push({
 
 
 <section>
-<h2 id="underscore">_ – underscore </h2>
+<h2 id="underscore">_ – underscore</h2>
 
 <dl data-key="underscore">
   <dt><kbd>_</kbd></dt>
   <dd>▾ move [count] lines - 1 downward on first non-blank char</dd>
+</dl>
+
+</section>
+
+
+<section>
+<h2 id="equals-sign">= – equals-sign</h2>
+
+<dl data-key="equals-sign">
+  <dt><kbd>=</kbd>{motion}</dt>
+  <dd>auto-format lines</dd>
 </dl>
 
 </section>
