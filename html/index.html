@@ -304,8 +304,8 @@
 <h2 id="m">m – mike</h2>
 
 <dl data-key="m">
-  <dt><kbd>m</kbd>{name}</dt>
-  <dd>add a <a href="#mark">mark</a> {name} at current position</dd>
+  <dt><kbd>m</kbd>{mark}</dt>
+  <dd>add a <a href="#mark">mark</a> {mark} at current position</dd>
   <dt><kbd>M</kbd></dt>
   <dd>jump to <a href="#middle-window">middle</a> of window</dd>
 
@@ -618,8 +618,11 @@
 <h2 id="single-quote">' – single-quote</h2>
 
 <dl data-key="single-quote">
-  <dt><kbd>'</kbd>{name}<dt>
-  <dd>jump to first non-blank char of line marked by {name}</dd>
+  <dt><kbd>'</kbd>{mark}<dt>
+  <dd>jump to first non-blank char of line marked by {mark}</dd>
+
+  <dt><kbd>g'</kbd>{mark}<dt>
+  <dd>jump to {mark} but don't change the jumplist when jumping within current buffer</dd>
 
   <dt class="not-used"><kbd>CTRL-'</kbd><dt>
   <dd class="not-used">not used</dd>
@@ -667,8 +670,8 @@ arrows.push({
 <h2 id="double-quote">" – double-quote</h2>
 
 <dl data-key="double-quote">
-  <dt><kbd>"</kbd>{name}<dt>
-  <dd>use register {name} for next operation</dd>
+  <dt><kbd>"</kbd>{register}<dt>
+  <dd>use {register} for next command</dd>
 </dl>
 
 </section>
@@ -678,8 +681,11 @@ arrows.push({
 <h2 id="back-quote">` – back-quote</h2>
 
 <dl data-key="back-quote">
-  <dt><kbd>`</kbd>{name}<dt>
-  <dd>jump to position marked by {name}</dd>
+  <dt><kbd>`</kbd>{mark}<dt>
+  <dd>jump to position marked by {mark}</dd>
+
+  <dt><kbd>g`</kbd>{mark}<dt>
+  <dd>jump to {mark} but don't change the jumplist when jumping within current buffer</dd>
 
   <dt class="not-used"><kbd>CTRL-`</kbd><dt>
   <dd class="not-used">not used</dd>
@@ -768,6 +774,9 @@ arrows.push({
 <dl data-key="exclamation-mark">
   <dt><kbd>!</kbd>{motion}{filter}</dt>
   <dd>filter {motion} text lines through external program {filter}</dd>
+
+  <dt class="not-used"><kbd>g!</kbd></dt>
+  <dd class="not-used">not used</dd>
 </dl>
 
 </section>
@@ -777,8 +786,8 @@ arrows.push({
 <h2 id="at-sign">@ – at-sign</h2>
 
 <dl data-key="at-sign">
-  <dt><kbd>@</kbd>{name}</dt>
-  <dd>exectute content of register {name}</dd>
+  <dt><kbd>@</kbd>{register}</dt>
+  <dd>exectute content of {register}</dd>
 </dl>
 
 </section>
