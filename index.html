@@ -69,6 +69,14 @@
       <li><a href="#period" title="symbol . (period)">.</a></li>
       <li><a href="#slash" title="symbol / (slash)">/</a></li>
       <li><a href="#question-mark" title="symbol ? (question-mark)">?</a></li>
+      <li><a href="#left-chevron" title="symbol < (left-chevron)">&lt;</a></li>
+      <li><a href="#right-chevron" title="symbol > (right-chevron)">&gt;</a></li>
+      <li><a href="#left-paren" title="symbol ( (left-paren)">(</a></li>
+      <li><a href="#right-paren" title="symbol ) (right-paren)">)</a></li>
+      <li><a href="#left-brace" title="symbol { (left-brace)">{</a></li>
+      <li><a href="#right-brace" title="symbol } (right-brace)">}</a></li>
+      <li><a href="#left-bracket" title="symbol [ (left-bracket)">[</a></li>
+      <li><a href="#right-bracket" title="symbol ] (right-bracket)">]</a></li>
     </ul>
   </nav>
 </header>
@@ -128,11 +136,11 @@
           <em><a>8</a></em>
         </li>
         <li id="key_AE09" class="number">
-          <strong><a>(</a></strong>
+          <strong><a href="#left-paren">(</a></strong>
           <em><a>9</a></em>
         </li>
         <li id="key_AE10" class="number">
-          <strong><a>)<a></strong>
+          <strong><a href="#right-paren">)<a></strong>
           <em class="horizontal-motion"><a>0</a></em>
         </li>
         <li id="key_AE11" class="symbol">
@@ -194,12 +202,12 @@
           <em class="register"><a href="#p">p</a></em>
         </li>
         <li id="key_AD11" class="qwerty symbol">
-          <strong><a>{</a></strong>
-          <em><a>[</a></em>
+          <strong><a href="#left-brace">{</a></strong>
+          <em><a href="#left-bracket">[</a></em>
         </li>
         <li id="key_AD12" class="qwerty symbol">
-          <strong><a>}</a></strong>
-          <em><a>]</a></em>
+          <strong><a href="#right-brace">}</a></strong>
+          <em><a href="#right-bracket">]</a></em>
         </li>
         <li id="key_BKSL" class="symbol">
           <strong><a>|</a></strong>
@@ -305,11 +313,11 @@
           <em class="mark"><a href="#m">m</a></em>
         </li>
         <li id="key_AB08" class="qwerty symbol">
-          <strong><a>&lt;</a></strong>
+          <strong><a href="#left-chevron">&lt;</a></strong>
           <em><a href="#comma">,</a></em>
         </li>
         <li id="key_AB09" class="qwerty symbol">
-          <strong><a>&gt;</a></strong>
+          <strong><a href="#right-chevron">&gt;</a></strong>
           <em><a href="#period">.</a></em>
         </li>
         <li id="key_AB10" class="symbol">
@@ -1404,6 +1412,96 @@ arrows.push({
 </section>
 
 
+<section>
+<h2 id="left-chevron">&lt; – left chevron</h2>
+
+<dl data-key="left-chevron">
+  <dt><kbd>&lt;</kbd>{motion}</dt>
+  <dd>shift {motion} lines one 'shiftwidth' leftwards</dd>
+  <dt><kbd>&lt;&lt;</kbd></dt>
+  <dd>shift [count] lines one 'shiftwidth' leftwards</dd>
+</dl>
+
+</section>
+
+
+<section>
+<h2 id="right-chevron">&gt; – right chevron</h2>
+
+<dl data-key="right-chevron">
+  <dt><kbd>&gt;</kbd>{motion}</dt>
+  <dd>shift {motion} lines one 'shiftwidth' rightwards</dd>
+  <dt><kbd>&gt;&gt;</kbd></dt>
+  <dd>shift [count] lines one 'shiftwidth' rightwards</dd>
+</dl>
+
+</section>
+
+
+<section>
+<h2 id="left-paren">( – left paren</h2>
+
+<dl data-key="left-paren">
+  <dt><kbd>(</kbd></dt>
+  <dd>[count] sentences backward</dd>
+</dl>
+
+</section>
+
+
+<section>
+<h2 id="right-paren">) – right paren</h2>
+
+<dl data-key="right-paren">
+  <dt><kbd>)</kbd></dt>
+  <dd>[count] sentences forward</dd>
+</dl>
+
+</section>
+
+
+<section>
+<h2 id="left-brace">{ – left brace</h2>
+
+<dl data-key="left-brace">
+  <dt><kbd>{</kbd></dt>
+  <dd>[count] paragraphs backward</dd>
+</dl>
+
+</section>
+
+
+<section>
+<h2 id="right-brace">} – right brace</h2>
+
+<dl data-key="right-brace">
+  <dt><kbd>}</kbd></dt>
+  <dd>[count] paragraphs forward</dd>
+</dl>
+
+</section>
+
+
+<section>
+<h2 id="left-bracket">[ – left bracket</h2>
+
+<dl data-key="left-bracket">
+  <dt><kbd>[</kbd></dt>
+  <dd>enter left bracket mode</dd>
+</dl>
+
+</section>
+
+
+<section>
+<h2 id="right-bracket">] – right bracket</h2>
+
+<dl data-key="right-bracket">
+  <dt><kbd>]</kbd></dt>
+  <dd>enter right bracket mode</dd>
+</dl>
+
+</section>
 
 
 </main>
