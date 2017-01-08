@@ -77,6 +77,9 @@
       <li><a href="#right-brace" title="symbol } (right-brace)">}</a></li>
       <li><a href="#left-bracket" title="symbol [ (left-bracket)">[</a></li>
       <li><a href="#right-bracket" title="symbol ] (right-bracket)">]</a></li>
+      <li><a href="#plus" title="symbol + (plus)">+</a></li>
+      <li><a href="#minus" title="symbol - (minus)">-</a></li>
+      <li><a href="#underscore" title="symbol _ (underscore)">_</a></li>
     </ul>
   </nav>
 </header>
@@ -144,11 +147,11 @@
           <em class="horizontal-motion"><a>0</a></em>
         </li>
         <li id="key_AE11" class="symbol">
-          <strong><a>_</a></strong>
-          <em><a>-</a></em>
+          <strong><a href="#underscore">_</a></strong>
+          <em><a href="#minus">-</a></em>
         </li>
         <li id="key_AE12" class="symbol">
-          <strong><a>+</a></strong>
+          <strong><a href="#plus">+</a></strong>
           <em><a>=</a></em>
         </li>
         <li id="key_BKSP" class="specialKey">
@@ -691,7 +694,7 @@ arrows.push({
   <dt><kbd>M</kbd></dt>
   <dd>jump to <a href="#middle-window">middle</a> of window</dd>
   <dt><kbd>CTRL-m</kbd></dt>
-  <dd>▾ move [count] lines downward on first non-blank char</dd>
+  <dd>▾ move [count] lines downward on first non-blank char (same as <kbd>+</kbd> and <kbd>&lt;CR&gt;</kbd>)</dd>
 </dl>
 
 <article>
@@ -1499,6 +1502,39 @@ arrows.push({
 <dl data-key="right-bracket">
   <dt><kbd>]</kbd></dt>
   <dd>enter right bracket mode</dd>
+</dl>
+
+</section>
+
+
+<section>
+<h2 id="plus">+ – plus</h2>
+
+<dl data-key="plus">
+  <dt><kbd>+</kbd></dt>
+  <dd>▾ move [count] lines downward on first non-blank char (same as <kbd>&lt;CR&gt;</kbd>)</dd>
+</dl>
+
+</section>
+
+
+<section>
+<h2 id="minus">- – minus</h2>
+
+<dl data-key="minus">
+  <dt><kbd>-</kbd></dt>
+  <dd>▴ move [count] lines upward on first non-blank char</dd>
+</dl>
+
+</section>
+
+
+<section>
+<h2 id="underscore">_ – underscore </h2>
+
+<dl data-key="underscore">
+  <dt><kbd>_</kbd></dt>
+  <dd>▾ move [count] lines - 1 downward on first non-blank char</dd>
 </dl>
 
 </section>
