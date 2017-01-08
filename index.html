@@ -492,6 +492,10 @@ arrows.push({
   <dd>not used</dd>
   <dt><kbd>gC</kbd></dt>
   <dd>not used</dd>
+  <dt><kbd>zc</kbd></dt>
+  <dd>close one fold under cursor (opposite of <kbd>zo</kbd>)</dd>
+  <dt><kbd>zC</kbd></dt>
+  <dd>close all folds under cursor recursively (opposite of <kbd>zO</kbd>)</dd>
   <dt><kbd>CTRL-c</kbd></dt>
   <dd>interrupt current search command</dd>
 </dl>
@@ -519,10 +523,17 @@ arrows.push({
   <dd>delete [count] lines (default current line)</dd>
   <dt><kbd>D</kbd></dt>
   <dd>delete [count] lines (same as <kbd>d$</kbd>)</dd>
+
   <dt><kbd>gd</kbd></dt>
   <dd>goto local declaration</dd>
   <dt><kbd>gD</kbd></dt>
   <dd>goto global declaration</dd>
+
+  <dt><kbd>zd</kbd></dt>
+  <dd>delete one fold at cursor</dd>
+  <dt><kbd>zD</kbd></dt>
+  <dd>delte folds recursively at cursor</dd>
+
   <dt><kbd>CTRL-d</kbd></dt>
   <dd>▿ scroll <a href="#down">down</a> half a window (opposite of <kbd>CTRL-u</kbd>)</dd>
 </dl>
@@ -666,10 +677,17 @@ arrows.push({
   <dd>insert text after cursor [count] times</dd>
   <dt><kbd>I</kbd></dt>
   <dd>insert text before first non-blank char in line [count] times</dd>
+
   <dt><kbd>gi</kbd></dt>
   <dd>insert text in same position as where insert mode was stopped last time in current buffer</dd>
   <dt><kbd>gI</kbd></dt>
   <dd>insert text in column 1 [count] times</dd>
+
+  <dt><kbd>zi</kbd></dt>
+  <dd>invert foldenable option</dd>
+  <dt><kbd>zI</kbd></dt>
+  <dd>not used</dd>
+
   <dt><kbd>CTRL-i</kbd></dt>
   <dd>go to [count] newer cursor position in <a href="#/jump">jump</a> list</dd>
 </dl>
@@ -685,10 +703,17 @@ arrows.push({
   <dd>▾ move [count] lines downward</dd>
   <dt><kbd>J</kbd></dt>
   <dd>join [count] lines with a minimum of two lines</dd>
+
   <dt><kbd>gj</kbd></dt>
   <dd>▾ move [count] display lines downward</dd>
   <dt><kbd>gJ</kbd></dt>
   <dd>like <kbd>J</kbd> but don't insert or remove any spaces</dd>
+
+  <dt><kbd>zj</kbd></dt>
+  <dd>move downwards to start of next fold</dd>
+  <dt><kbd>zJ</kbd></dt>
+  <dd>not used</dd>
+
   <dt><kbd>CTRL-j</kbd></dt>
   <dd>▾ move [count] lines downward (same as <kbd>j</kbd>)</dd>
 </dl>
@@ -718,10 +743,17 @@ arrows.push({
   <dd>▴ move [count] lines upward</dd>
   <dt><kbd>K</kbd></dt>
   <dd>run a program to lookup keyword under cursor</dd>
+
   <dt><kbd>gk</kbd></dt>
   <dd>▴ move [count] display lines upward</dd>
   <dt><kbd>gK</kbd></dt>
   <dd>not used</dd>
+
+  <dt><kbd>zk</kbd></dt>
+  <dd>move upwards to end of previous fold</dd>
+  <dt><kbd>zK</kbd></dt>
+  <dd>not used</dd>
+
   <dt><kbd>CTRL-k</kbd></dt>
   <dd>not used</dd>
 </dl>
@@ -918,6 +950,10 @@ arrows.push({
   <dd>go to [count] byte in buffer</dd>
   <dt><kbd>gO</kbd></dt>
   <dd>not used</dd>
+  <dt><kbd>zo</kbd></dt>
+  <dd>open one fold under cursor (opposite of <kbd>zc</kbd>)</dd>
+  <dt><kbd>zO</kbd></dt>
+  <dd>open all folds under cursor recursively (opposite of <kbd>zC</kbd>)</dd>
   <dt><kbd>CTRL-o</kbd></dt>
   <dd>go to [count] older cursor position in <a href="#jump">jump</a> list</dd>
 </dl>
@@ -974,6 +1010,10 @@ arrows.push({
   <dd>replace virtual char under cursor with {char}</dd>
   <dt><kbd>gR</kbd></dt>
   <dd>enter virtual replace mode</dd>
+  <dt><kbd>zr</kbd></dt>
+  <dd>reduce folding</dd>
+  <dt><kbd>zR</kbd></dt>
+  <dd>open all folds</dd>
   <dt><kbd>CTRL-r</kbd></dt>
   <dd>redo [count] changes which were undone</dd>
 </dl>
