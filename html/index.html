@@ -20,6 +20,8 @@
   <dd>append text at end of line [count] times</dd>
   <dt><kbd>ga</kbd></dt>
   <dd>print <a href="#ascii">ascii</a> value of char under cursor</dd>
+  <dt><kbd>gA</kbd></dt>
+  <dd>not used</dd>
   <dt><kbd>CTRL-a</kbd></dt>
   <dd>increment number (opposite <kbd>CTRL-x</kbd>)</dd>
 </dl>
@@ -36,6 +38,10 @@
   <dd>◂ move backwards to beginning of word</dd>
   <dt><kbd>B</kbd></dt>
   <dd>◂ move backwards to beginning of WORD</dd>
+  <dt><kbd>gb</kbd></dt>
+  <dd>not used</dd>
+  <dt><kbd>gB</kbd></dt>
+  <dd>not used</dd>
   <dt><kbd>CTRL-b</kbd></dt>
   <dd>▵ scroll [count] pages <a href="#up">up</a> (opposite <kbd>CTRL-f</kbd>)</dd>
 </dl>
@@ -55,6 +61,10 @@
   <dd>delete [count] lines and start insert</dd>
   <dt><kbd>C</kbd></dt>
   <dd>delete from cursor to end of line and start insert</dd>
+  <dt><kbd>gc</kbd></dt>
+  <dd>not used</dd>
+  <dt><kbd>gC</kbd></dt>
+  <dd>not used</dd>
   <dt><kbd>CTRL-c</kbd></dt>
   <dd>interrupt current search command</dd>
 </dl>
@@ -73,6 +83,10 @@
   <dd>delete [count] lines (default current line)</dd>
   <dt><kbd>D</kbd></dt>
   <dd>delete [count] lines (same as <kbd>d$</kbd>)</dd>
+  <dt><kbd>gd</kbd></dt>
+  <dd>goto local declaration</dd>
+  <dt><kbd>gD</kbd></dt>
+  <dd>goto global declaration</dd>
   <dt><kbd>CTRL-d</kbd></dt>
   <dd>▿ scroll <a href="#down">down</a> half a window (opposite of <kbd>CTRL-u</kbd>)</dd>
 </dl>
@@ -108,6 +122,10 @@
   <dd>▸ move to [count]'th occurrence of {char} to the right</dd>
   <dt><kbd>F</kbd>{char}</dt>
   <dd>◂ move to [count]'th occurrence of {char} to the left</dd>
+  <dt><kbd>gf</kbd></dt>
+  <dd>goto file under or after cursor</dd>
+  <dt><kbd>gF</kbd></dt>
+  <dd>goto file under or after cursor with line number handling</dd>
   <dt><kbd>CTRL-f</kbd></dt>
   <dd>▿ scroll [count] pages <a href="#down">down</a> (opposite <kbd>CTRL-b</kbd>)</dd>
 </dl>
@@ -127,6 +145,8 @@
   <dd>jump to beginning of buffer</dd>
   <dt><kbd>G</kbd></dt>
   <dd>jump to end of buffer</dd>
+  <dt><kbd>gG</kbd></dt>
+  <dd>not used</dd>
   <dt><kbd>CTRL-g</kbd></dt>
   <dd>print info about current file (same as <cmd>file</cmd>)</dd>
 </dl>
@@ -142,6 +162,10 @@
   <dd>◂ move [count] chars to the left</dd>
   <dt><kbd>H</kbd></dt>
   <dd>jump to <a href="#top-window">top</a> of window</dd>
+  <dt><kbd>gh</kbd></dt>
+  <dd>start select mode charwise</dd>
+  <dt><kbd>gH</kbd></dt>
+  <dd>start select mode linewise</dd>
   <dt><kbd>CTRL-h</kbd></dt>
   <dd>◂ move [count] chars to the left (same as <kbd>h</kbd>)</dd>
 </dl>
@@ -158,6 +182,10 @@
   <dd>insert text after cursor [count] times</dd>
   <dt><kbd>I</kbd></dt>
   <dd>insert text before first non-blank char in line [count] times</dd>
+  <dt><kbd>gi</kbd></dt>
+  <dd>insert text in same position as where insert mode was stopped last time in current buffer</dd>
+  <dt><kbd>gI</kbd></dt>
+  <dd>insert text in column 1 [count] times</dd>
   <dt><kbd>CTRL-i</kbd></dt>
   <dd>go to [count] newer cursor position in <a href="#/jump">jump</a> list</dd>
 </dl>
@@ -173,6 +201,10 @@
   <dd>▾ move [count] lines downward</dd>
   <dt><kbd>J</kbd></dt>
   <dd>join [count] lines with a minimum of two lines</dd>
+  <dt><kbd>gj</kbd></dt>
+  <dd>▾ move [count] display lines downward</dd>
+  <dt><kbd>gJ</kbd></dt>
+  <dd>like <kbd>J</kbd> but don't insert or remove any spaces</dd>
   <dt><kbd>CTRL-j</kbd></dt>
   <dd>▾ move [count] lines downward (same as <kbd>j</kbd>)</dd>
 </dl>
@@ -189,6 +221,10 @@
   <dd>▴ move [count] lines upward</dd>
   <dt><kbd>K</kbd></dt>
   <dd>run a program to lookup keyword under cursor</dd>
+  <dt><kbd>gk</kbd></dt>
+  <dd>▴ move [count] display lines upward</dd>
+  <dt><kbd>gK</kbd></dt>
+  <dd>not used</dd>
   <dt><kbd>CTRL-k</kbd></dt>
   <dd>not used</dd>
 </dl>
@@ -204,6 +240,10 @@
   <dd>▸ move [count] chars to the right</dd>
   <dt><kbd>L</kbd></dt>
   <dd>jump to <a href="#bottom-window">bottom</a> of window</dd>
+  <dt><kbd>gl</kbd></dt>
+  <dd>not used</dd>
+  <dt><kbd>gL</kbd></dt>
+  <dd>not used</dd>
   <dt><kbd>CTRL-l</kbd></dt>
   <dd>redraw screen</dd>
 </dl>
@@ -219,6 +259,10 @@
   <dd>add a <a href="#mark">mark</a> {name} at current position</dd>
   <dt><kbd>M</kbd></dt>
   <dd>jump to <a href="#middle-window">middle</a> of window</dd>
+  <dt><kbd>gm</kbd></dt>
+  <dd>like <kbd>g0</kbd> but half a screenwidth to the right</dd>
+  <dt><kbd>gM</kbd></dt>
+  <dd>not used</dd>
   <dt><kbd>CTRL-m</kbd></dt>
   <dd>▾ move [count] lines downward on first non-blank char (same as <kbd>+</kbd> and <kbd>&lt;CR&gt;</kbd>)</dd>
 </dl>
@@ -237,6 +281,10 @@
   <dd>repeat latest search [count] times</dd>
   <dt><kbd>N</kbd></dt>
   <dd>repeat latest search [count] times in opposite direction</dd>
+  <dt><kbd>gn</kbd></dt>
+  <dd>search forward for last used search pattern</dd>
+  <dt><kbd>gN</kbd></dt>
+  <dd>search backward for last used search pattern</dd>
   <dt><kbd>CTRL-n</kbd></dt>
   <dd>▾ move [count] lines downward (same as <kbd>j</kbd>)</dd>
 </dl>
@@ -252,6 +300,10 @@
   <dd>▾ begin new line below cursor and start insert</dd>
   <dt><kbd>O</kbd></dt>
   <dd>▴ begin new line above cursor and start insert</dd>
+  <dt><kbd>go</kbd></dt>
+  <dd>go to [count] byte in buffer</dd>
+  <dt><kbd>gO</kbd></dt>
+  <dd>not used</dd>
   <dt><kbd>CTRL-o</kbd></dt>
   <dd>go to [count] older cursor position in <a href="#jump">jump</a> list</dd>
 </dl>
@@ -267,6 +319,10 @@
   <dd>paste text after cursor</dd>
   <dt><kbd>P</kbd></dt>
   <dd>paste text before cursor</dd>
+  <dt><kbd>gp</kbd></dt>
+  <dd>like <kbd>p</kbd> but leave cursor just after new text</dd>
+  <dt><kbd>gP</kbd></dt>
+  <dd>like <kbd>P</kbd> but leave cursor just after new text</dd>
   <dt><kbd>CTRL-p</kbd></dt>
   <dd>▴ move [count] lines upward (same as <kbd>k</kbd>)</dd>
 </dl>
@@ -281,6 +337,10 @@
   <dd>record macro</dd>
   <dt><kbd>Q</kbd></dt>
   <dd>switch to Ex mode</dd>
+  <dt><kbd>gq</kbd>{motion}</dt>
+  <dd>format lines that {motion} moves over</dd>
+  <dt><kbd>gQ</kbd></dt>
+  <dd>not used</dd>
   <dt><kbd>CTRL-q</kbd></dt>
   <dd>same as <kbd>CTRL-v</kbd></dd>
 </dl>
@@ -316,6 +376,10 @@
   <dd>delete [count] chars and start insert (same as <kbd>cl</kbd>)</dd>
   <dt><kbd>S</kbd></dt>
   <dd>delete [count] lines and start insert (same as <kbd>cc</kbd>)</dd>
+  <dt><kbd>gs</kbd></dt>
+  <dd>sleep for [count] seconds</dd>
+  <dt><kbd>gS</kbd></dt>
+  <dd>not used</dd>
   <dt><kbd>CTRL-s</kbd></dt>
   <dd>stop terminal output</dd>
 </dl>
@@ -331,6 +395,10 @@
   <dd>▸ move till before [count]'th occurrence of {char} to the right</dd>
   <dt><kbd>T</kbd>{char}</dt>
   <dd>◂ move till before [count]'th occurrence of {char} to the left</dd>
+  <dt><kbd>gt</kbd></dt>
+  <dd>go to next tab page</dd>
+  <dt><kbd>gT</kbd></dt>
+  <dd>go to previous tab page</dd>
   <dt><kbd>CTRL-t</kbd></dt>
   <dd>jump to N older Tag in tag list</dd>
 </dl>
@@ -348,6 +416,10 @@
   <dd>undo [count] changes</dd>
   <dt><kbd>U</kbd></dt>
   <dd>undo all latest changes on line the lastest change was made</dd>
+  <dt><kbd>gu</kbd>{motion}</dt>
+  <dd>make {motion} text lowercase</dd>
+  <dt><kbd>gU</kbd>{motion}</dt>
+  <dd>make {motion} text uppercase</dd>
   <dt><kbd>CTRL-u</kbd></dt>
   <dd>▵ scroll <a href="#up">up</a> half a window (opposite <kbd>CTRL-d</kbd>)</dd>
 </dl>
@@ -364,6 +436,10 @@
   <dd>start visual mode charwise</dd>
   <dt><kbd>V</kbd></dt>
   <dd>start visual mode linewise</dd>
+  <dt><kbd>gv</kbd></dt>
+  <dd>start visual mode with same area as previous area and same mode</dd>
+  <dt><kbd>gV</kbd></dt>
+  <dd>not used</dd>
   <dt><kbd>CTRL-v</kbd></dt>
   <dd>start visual mode blockwise</dd>
 </dl>
@@ -379,6 +455,10 @@
   <dd>▸ move forwards to beginning of word</dd>
   <dt><kbd>W</kbd></dt>
   <dd>▸ move forwards to beginning of WORD</dd>
+  <dt><kbd>gw</kbd>{motion}</dt>
+  <dd>format lines that {motion} moves over and puts cursor back to same position</dd>
+  <dt><kbd>gW</kbd></dt>
+  <dd>not used</dd>
   <dt><kbd>CTRL-w</kbd></dt>
   <dd>prefix for window commands</dd>
 </dl>
@@ -394,6 +474,10 @@
   <dd>delete [count] chars under and after cursor (same <kbd>dl</kbd>)</dd>
   <dt><kbd>X</kbd></dt>
   <dd>delete [count] chars before cursor (same <kbd>dh</kbd>)</dd>
+  <dt><kbd>gx</kbd></dt>
+  <dd>not used</dd>
+  <dt><kbd>gX</kbd></dt>
+  <dd>not used</dd>
   <dt><kbd>CTRL-x</kbd></dt>
   <dd>decrement number (opposite <kbd>CTRL-a</kbd>)</dd>
 </dl>
@@ -411,6 +495,10 @@
   <dd>yank [count] lines (default current line)</dd>
   <dt><kbd>Y</kbd></dt>
   <dd>yank from cursor to end of line (same <kbd>y$</kbd>) (not by default)</dd>
+  <dt><kbd>gy</kbd></dt>
+  <dd>not used</dd>
+  <dt><kbd>gY</kbd></dt>
+  <dd>not used</dd>
   <dt><kbd>CTRL-y</kbd></dt>
   <dd>▵ scroll [count] lines <a href="#up">up</a> (opposite <kbd>CTRL-e</kbd>)</dd>
 </dl>
@@ -428,6 +516,10 @@
   <dd>redraw current line at <a href="#middle-window">middle of window</a></dd>
   <dt><kbd>Z</kbd><dt>
   <dd>quit</dd>
+  <dt><kbd>gz</kbd></dt>
+  <dd>not used</dd>
+  <dt><kbd>gZ</kbd></dt>
+  <dd>not used</dd>
   <dt><kbd>CTRL-z</kbd><dt>
   <dd>suspend vim (the job is now in background and your shell has the focus. use fg to get back)</dd>
 </dl>
@@ -571,6 +663,10 @@ arrows.push({
 <dl data-key="tilde">
   <dt><kbd>~</kbd>{motion}</dt>
   <dd>switch case of {motion} text</dd>
+  <dt><kbd>g~</kbd>{motion}</dt>
+  <dd>switch case of {motion} text</dd>
+  <dt><kbd>g~~</kbd>{motion}</dt>
+  <dd>switch case of current line</dd>
 </dl>
 
 </section>
@@ -604,6 +700,8 @@ arrows.push({
 <dl data-key="number-sign">
   <dt><kbd>#</kbd></dt>
   <dd>search backward for id under cursor</dd>
+  <dt><kbd>g#</kbd></dt>
+  <dd>like <kbd>#</kbd> but don't put "\<" and "\>" around word</dd>
   <dt><kbd>CTRL-#</kbd></dt>
   <dd>not used</dd>
 </dl>
@@ -689,6 +787,8 @@ arrows.push({
 <dl data-key="star">
   <dt><kbd>*</kbd></dt>
   <dd>search for id under cursor</dd>
+  <dt><kbd>g*</kbd></dt>
+  <dd>like <kbd>*</kbd> but don't put "\<" and "\>" around word</dd>
 </dl>
 
 </section>
@@ -743,7 +843,7 @@ arrows.push({
 
 <dl data-key="backslash">
   <dt><kbd>\</kbd></dt>
-  <dd>not used</dd>
+  <dd>leader key</dd>
 </dl>
 
 </section>
@@ -777,6 +877,8 @@ arrows.push({
 <dl data-key="question-mark">
   <dt><kbd>?</kbd>{pattern}</dt>
   <dd>search backward for {pattern}</dd>
+  <dt><kbd>g?</kbd>{motion}</dt>
+  <dd>encode {motion} in rot13</dd>
 </dl>
 
 </section>
@@ -924,6 +1026,8 @@ arrows.push({
 <dl data-key="zero">
   <dt><kbd>0</kbd></dt>
   <dd>◂ move to first char of line</dd>
+  <dt><kbd>g0</kbd></dt>
+  <dd>◂ when lines wrap on, move to first char of screen line</dd>
 </dl>
 
 </section>
@@ -935,6 +1039,8 @@ arrows.push({
 <dl data-key="numbers">
   <dt><kbd>[1-9]</kbd></dt>
   <dd>specify a <a href="#count">count</a> before command</dd>
+  <dt><kbd>g8</kbd></dt>
+  <dd>print hex values of bytes used in char under cursor</dd>
 </dl>
 
 </section>

@@ -72,7 +72,7 @@ dt {
 
 dd {
   margin-bottom: 1rem;
-  margin-left: 8rem;
+  margin-left: 11rem;
 }
 
 kbd {
@@ -127,7 +127,7 @@ header .warning {
 }
 
 #key-details {
-  min-height: 14rem;
+  min-height: 16rem;
   margin: 0 auto;
   width: 60%;
 }
