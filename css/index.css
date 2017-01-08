@@ -29,6 +29,10 @@ h2 a {
   font-size: 1.2rem;
 }
 
+h2:target {
+  background: gold;
+}
+
 h3 {
   font-size: 2.0rem;
 }
