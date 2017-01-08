@@ -170,6 +170,8 @@
 <dl data-key="j">
   <dt><kbd>j</kbd></dt>
   <dd>▾ move [count] lines downward</dd>
+  <dt><kbd>J</kbd></dt>
+  <dd>join [count] lines with a minimum of two lines</dd>
   <dt><kbd>CTRL-j</kbd></dt>
   <dd>▾ move [count] lines downward (same as <kbd>j</kbd>)</dd>
 </dl>
@@ -184,6 +186,8 @@
 <dl data-key="k">
   <dt><kbd>k</kbd></dt>
   <dd>▴ move [count] lines upward</dd>
+  <dt><kbd>K</kbd></dt>
+  <dd>run a program to lookup keyword under cursor</dd>
   <dt><kbd>CTRL-k</kbd></dt>
   <dd>not used</dd>
 </dl>
@@ -230,7 +234,7 @@
 <dl data-key="n">
   <dt><kbd>n</kbd></dt>
   <dd>repeat latest search [count] times</dd>
-  <dt><kbd>n</kbd></dt>
+  <dt><kbd>N</kbd></dt>
   <dd>repeat latest search [count] times in opposite direction</dd>
   <dt><kbd>CTRL-n</kbd></dt>
   <dd>▾ move [count] lines downward (same as <kbd>j</kbd>)</dd>
@@ -289,10 +293,10 @@
 <dl data-key="r">
   <dt><kbd>r</kbd>{char}</dt>
   <dd>replace char under cursor with {char}</dd>
-  <dt><kbd>gr</kbd></dt>
-  <dd>replace virtual char under cursor with {char}</dd>
   <dt><kbd>R</kbd></dt>
   <dd>enter replace mode</dd>
+  <dt><kbd>gr</kbd></dt>
+  <dd>replace virtual char under cursor with {char}</dd>
   <dt><kbd>gR</kbd></dt>
   <dd>enter virtual replace mode</dd>
 </dl>
@@ -416,6 +420,8 @@
   <dd>do nothing by itself. It's a prefix key for all <a href="#fold">fold</a> related commands</dd>
   <dt><kbd>zz</kbd><dt>
   <dd>redraw current line at <a href="#middle-window">middle of window</a></dd>
+  <dt><kbd>Z</kbd><dt>
+  <dd>quit</dd>
   <dt><kbd>CTRL-z</kbd><dt>
   <dd>suspend vim (the job is now in background and your shell has the focus. use fg to get back)</dd>
 </dl>
