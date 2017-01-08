@@ -132,6 +132,10 @@ header .warning {
   width: 60%;
 }
 
+.not-used {
+  opacity: 0.4;
+}
+
 main {
   margin: 0 auto;
   width: 60%;
