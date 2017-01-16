@@ -1,0 +1,20 @@
+<article>
+
+<header>
+  <h3 id="autoload-separator"># in identifiers (vimL)</h3>
+</header>
+
+<p>You've used the foo plugin for a long time and you really enjoy it. Well, except this little painful behavior that happens sometimes and that you would like to change.</p>
+
+<p>Before bothering the maintainer with your request, you start reading its source to see if you can fix it yourself. By chance, the code is neatly factorized in functions. But they all have weird and long names, like <code>foo#disable()</code> or even longer <code>foo#engine#restart()</code>.</p>
+
+<p>Your intuition tells you that the <code>#</code> symbol acts like some kind of namespace separator. And that's right. But it has a deeper meaning.</p>
+
+<p>For performance reason, evaluating too much code during vim startup will really slow down the experience. So code can be loaded on demand when execution is really needed. This mechanism is called <em>autoload</em>. In the runtime directory, there's a subdirectory called exactly like that: autoload. Scripts living inside will only be evaluated when requested.</p>
+
+<p><code>foo#disable</code> is a reflection of the file-system hierarchy: find the file called <code>autoload/foo.vim</code> and the function <code>foo#disable</code> should be inside.</p>
+
+<p>The more number signs there is, the deeper you go into subdirectories.</p>
+
+</article>
+

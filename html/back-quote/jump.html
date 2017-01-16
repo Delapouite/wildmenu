@@ -1,0 +1,58 @@
+<article>
+
+<header>
+  <h3 id="back-quote-jump">` jump</h3>
+  <kbd>'</kbd>
+  <a class="user-guide" href="https://neovim.io/doc/user/motion.html#mark-motions">see mark-motions in the user-guide</a>
+</header>
+
+<p>You can't see it but the letter <em>p</em> of the word <em>placed</em> has previously been <a href="#mark">marked</a> with the name <em>a</em>.</p>
+<p>To jump to this position, use <kbd>`</kbd> followed by the mark name, so in this case <kbd>`a</kbd>.</p>
+
+<pre><code>
+First boring line
+  Second line with the 'a' mark <target id="mark-back-t">p</target>laced on the 'p' of the word 'placed' (2,32)
+
+
+
+
+Current line with <cursor id="mark-back-c">c</cursor>ursor
+</code></pre>
+<script>
+arrows.push({
+  source: '#mark-back-c',
+  target: '#mark-back-t',
+  x1: s.r, y1: s.t, x2: t.l, y2: t.b,
+  text: '`a',
+  textStartOffset: 50,
+})
+</script>
+
+<p>Now you <a class="external" href="https://www.youtube.com/watch?v=39BIdOP0D6E">have to go back</a> ? Luckily vim automatically set the <strong><code>`</code></strong> mark at your previous position! So double tap to jump back: <kbd>``</kbd></p>
+
+<pre><code>
+First boring line
+  Second line with the 'a' mark <cursor id="mark-back2-c">p</cursor>laced on the 'p' of the word 'placed' (2,32)
+
+
+
+
+Current line with <target id="mark-back2-t">c</target>ursor
+</code></pre>
+<script>
+arrows.push({
+  source: '#mark-back2-c',
+  target: '#mark-back2-t',
+  x1: s.l, y1: s.b, x2: t.r, y2: t.t,
+  text: '``',
+  textStartOffset: 70,
+  textReverseDirection: true,
+})
+</script>
+
+<p>Guess what: if you press <kbd>``</kbd> again, you'll jump back to the letter <em>p</em>. Jump ad libitum!</p>
+
+<p>See also <a class="kbd" href="#single-quote-jump"><kbd>'</kbd></a> to land at the beginning of the line.</p>
+
+</article>
+

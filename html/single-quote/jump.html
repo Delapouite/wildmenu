@@ -1,0 +1,34 @@
+<article>
+
+<header>
+  <h3 id="single-quote-jump">' jump</h3>
+  <kbd>'</kbd>
+  <a class="user-guide" href="https://neovim.io/doc/user/motion.html#mark-motions">see mark-motions in the user-guide</a>
+</header>
+
+<p>There's no visible clue but the letter <em>p</em> of the word <em>placed</em> has previously been <a href="#mark">marked</a> with the name <em>a</em>.</p>
+<p>To jump to the first non-blank character of this line, use <kbd>'</kbd> followed by the mark name, so in this case <kbd>'a</kbd>.</p>
+
+<pre><code>
+First boring line
+  <target id="mark-single-t">S</target>econd line with the 'a' mark placed on the 'p' of the word 'placed' (2,32)
+
+
+
+
+Current line with <cursor id="mark-single-c">c</cursor>ursor
+</code></pre>
+<script>
+arrows.push({
+  source: '#mark-single-c',
+  target: '#mark-single-t',
+  x1: s.l, y1: s.t, x2: t.r, y2: t.b,
+  text: "'a",
+  textStartOffset: 70,
+  textReverseDirection: true,
+})
+</script>
+
+<p>See also <a class="kbd" href="#back-quote-jump"><kbd>`</kbd></a> to land more precisely.</p>
+
+</article>
