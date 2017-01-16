@@ -832,7 +832,13 @@
 <dl data-key="colon">
   <dt><kbd>:</kbd></dt>
   <dd>enter command mode</dd>
+
+  <dt class="not-used"><kbd>g:</kbd></dt>
+  <dd class="not-used">not used</dd>
 </dl>
+
+<h3>": register</h3>
+<p><code>":</code> is the <strong>last command-line</strong> register</p>
 
 </section>
 
@@ -882,6 +888,9 @@
   <dd class="not-used">not used</dd>
 </dl>
 
+<h3>". register</h3>
+<p><code>".</code> is the <strong>last inserted text</strong> register</p>
+
 </section>
 
 
@@ -905,6 +914,9 @@
 <dl data-key="pipe">
   <dt><kbd>|</kbd></dt>
   <dd>move to screen column [count] in current line</dd>
+
+  <dt class="not-used"><kbd>g|</kbd></dt>
+  <dd class="not-used">not used</dd>
 </dl>
 
 </section>
@@ -1039,7 +1051,13 @@
 <dl data-key="plus">
   <dt><kbd>+</kbd></dt>
   <dd>▾ move [count] lines downward on first non-blank char (same as <kbd>&lt;CR&gt;</kbd>)</dd>
+
+  <dt><kbd>g+</kbd></dt>
+  <dd>go to [count] newer text state</dd>
 </dl>
+
+<h3>"+ register</h3>
+<p><code>"+</code> is the <strong>clipboard</strong></p>
 
 </section>
 
@@ -1050,6 +1068,9 @@
 <dl data-key="minus">
   <dt><kbd>-</kbd></dt>
   <dd>▴ move [count] lines upward on first non-blank char</dd>
+
+  <dt><kbd>g-</kbd></dt>
+  <dd>go to [count] older text state</dd>
 </dl>
 
 <h3>"- register</h3>
@@ -1078,7 +1099,13 @@
 <dl data-key="equals-sign">
   <dt><kbd>=</kbd>{motion}</dt>
   <dd>auto-format lines</dd>
+
+  <dt class="not-used"><kbd>g=</kbd></dt>
+  <dd class="not-used">not used</dd>
 </dl>
+
+<h3>"= register</h3>
+<p><code>"=</code> is the <strong>expression</strong> register</p>
 
 </section>
 
