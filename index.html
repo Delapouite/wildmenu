@@ -1381,6 +1381,9 @@ arrows.push({
 <dl data-key="double-quote">
   <dt><kbd>"</kbd>{register}<dt>
   <dd>use {register} for next command</dd>
+
+  <dt class="not-used"><kbd>g"</kbd><dt>
+  <dd class="not-used">not used</dd>
 </dl>
 
 </section>
@@ -1497,6 +1500,9 @@ arrows.push({
 <dl data-key="at-sign">
   <dt><kbd>@</kbd>{register}</dt>
   <dd>exectute content of {register}</dd>
+
+  <dt><kbd>g@</kbd>{motion}</dt>
+  <dd>call function set by 'operatorfunc' option</dd>
 </dl>
 
 </section>
@@ -1549,6 +1555,9 @@ arrows.push({
   <dt><kbd>$</kbd></dt>
   <dd>▸ move to end of line</dd>
 
+  <dt><kbd>g$</kbd></dt>
+  <dd>▸ when lines wrap ('wrap' on) move to last char of screen line</dd>
+
   <dt class="not-used"><kbd>CTRL-$</kbd></dt>
   <dd>not used</dd>
 </dl>
@@ -1561,9 +1570,12 @@ arrows.push({
 
 <dl data-key="percent">
   <dt><kbd>%</kbd></dt>
-  <dd>go to matching char (parenthesis, brackets…)</dd>
+  <dd>go forward to matching char (parenthesis, brackets…)</dd>
   <dt>{count}<kbd>%</kbd></dt>
   <dd>go to {count}percentage in file</dd>
+
+  <dt><kbd>g%</kbd></dt>
+  <dd>go backward to matching char (parenthesis, brackets…)</dd>
 
   <dt class="not-used"><kbd>CTRL-%</kbd></dt>
   <dd class="not-used">not used</dd>
@@ -1581,6 +1593,9 @@ arrows.push({
 <dl data-key="caret">
   <dt><kbd>^</kbd></dt>
   <dd>◂ move to first non blank char</dd>
+
+  <dt><kbd>g^</kbd></dt>
+  <dd>◂ when lines wrap ('wrap' on) move to first non-blank char of screen line</dd>
 
   <dt><kbd>CTRL-^</kbd></dt>
   <dd>edit alternate file</dd>
@@ -1713,6 +1728,9 @@ arrows.push({
   <dd>shift {motion} lines one 'shiftwidth' leftwards</dd>
   <dt><kbd>&lt;&lt;</kbd></dt>
   <dd>shift [count] lines one 'shiftwidth' leftwards</dd>
+
+  <dt><kbd>g&lt;</kbd></dt>
+  <dd>see previous page of messages</dd>
 </dl>
 
 </section>
