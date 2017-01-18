@@ -389,6 +389,11 @@
   <dt class="not-used"><kbd>gA</kbd></dt>
   <dd class="not-used">not used</dd>
 
+  <dt><kbd>za</kbd></dt>
+  <dd>toggle fold</dd>
+  <dt><kbd>zA</kbd></dt>
+  <dd>toggle fold recursively</dd>
+
   <dt><kbd>CTRL-a</kbd></dt>
   <dd>increment number (opposite <kbd>CTRL-x</kbd>)</dd>
 </dl>
@@ -441,6 +446,11 @@
   <dt class="not-used"><kbd>gb</kbd></dt>
   <dd class="not-used">not used</dd>
   <dt class="not-used"><kbd>gB</kbd></dt>
+  <dd class="not-used">not used</dd>
+
+  <dt><kbd>zb</kbd></dt>
+  <dd>redraw, line [count] at bottom of window</dd>
+  <dt class="not-used"><kbd>zB</kbd></dt>
   <dd class="not-used">not used</dd>
 
   <dt><kbd>CTRL-b</kbd></dt>
@@ -604,6 +614,11 @@ arrows.push({
   <dt><kbd>gE</kbd></dt>
   <dd>◂ move backwards to end of WORD</dd>
 
+  <dt><kbd>ze</kbd></dt>
+  <dd>scroll text horizontally to position cursor to end of screen</dd>
+  <dt><kbd>zE</kbd></dt>
+  <dd>eliminate all folds in window</dd>
+
   <dt><kbd>CTRL-e</kbd></dt>
   <dd>▿ scroll [count] lines <a href="#down">down</a> opposite <kbd>CTRL-y</kbd></dd>
 </dl>
@@ -623,8 +638,13 @@ arrows.push({
   <dt><kbd>gf</kbd></dt>
   <dd>goto file under or after cursor</dd>
   <dt><kbd>gF</kbd></dt>
-
   <dd>goto file under or after cursor with line number handling</dd>
+
+  <dt><kbd>zf</kbd>{motion}</dt>
+  <dd>create a fold for {motion}</dd>
+  <dt><kbd>zF</kbd></dt>
+  <dd>create a fold for [count] lines</dd>
+
   <dt><kbd>CTRL-f</kbd></dt>
   <dd>▿ scroll [count] pages <a href="#down">down</a> (opposite <kbd>CTRL-b</kbd>)</dd>
 </dl>
@@ -660,6 +680,11 @@ arrows.push({
   <dt class="not-used"><kbd>gG</kbd></dt>
   <dd class="not-used">not used</dd>
 
+  <dt><kbd>zg</kbd></dt>
+  <dd>mark the word as good word (opposite <kbd>zw</kbd>)</dd>
+  <dt><kbd>zG</kbd></dt>
+  <dd>mark the word as good word in internal wordlist (opposite <kbd>zW</kbd>)</dd>
+
   <dt><kbd>CTRL-g</kbd></dt>
   <dd>print info about current file (same as <cmd>file</cmd>)</dd>
 </dl>
@@ -679,8 +704,13 @@ arrows.push({
   <dt><kbd>gh</kbd></dt>
   <dd>start select mode charwise</dd>
   <dt><kbd>gH</kbd></dt>
-
   <dd>start select mode linewise</dd>
+
+  <dt><kbd>zh</kbd></dt>
+  <dd>scroll the text [count] chars to the right</dd>
+  <dt><kbd>zH</kbd></dt>
+  <dd>scroll the text half a screenwidth to the right</dd>
+
   <dt><kbd>CTRL-h</kbd></dt>
   <dd>◂ move [count] chars to the left (same as <kbd>h</kbd>)</dd>
 </dl>
@@ -805,6 +835,11 @@ arrows.push({
   <dt class="not-used"><kbd>gL</kbd></dt>
   <dd class="not-used">not used</dd>
 
+  <dt><kbd>zl</kbd></dt>
+  <dd>scroll the text [count] chars to the left</dd>
+  <dt><kbd>zL</kbd></dt>
+  <dd>scroll the text half a screenwidth to the left</dd>
+
   <dt><kbd>CTRL-l</kbd></dt>
   <dd>redraw screen</dd>
 </dl>
@@ -825,6 +860,12 @@ arrows.push({
   <dd>like <kbd>g0</kbd> but half a screenwidth to the right</dd>
   <dt class="not-used"><kbd>gM</kbd></dt>
   <dd class="not-used">not used</dd>
+
+  <dt><kbd>zm</kbd></dt>
+  <dd>fold more</dd>
+
+  <dt><kbd>zM</kbd></dt>
+  <dd>close all folds</dd>
 
   <dt><kbd>CTRL-m</kbd></dt>
   <dd>▾ move [count] lines downward on first non-blank char (same as <kbd>+</kbd> and <kbd>&lt;CR&gt;</kbd>)</dd>
@@ -967,6 +1008,11 @@ arrows.push({
   <dt><kbd>gN</kbd></dt>
   <dd>search backward for last used search pattern</dd>
 
+  <dt><kbd>zn</kbd></dt>
+  <dd>fold none: all folds will be open</dd>
+  <dt><kbd>zN</kbd></dt>
+  <dd>fold normal: all folds will be as they were before</dd>
+
   <dt><kbd>CTRL-n</kbd></dt>
   <dd>▾ move [count] lines downward (same as <kbd>j</kbd>)</dd>
 </dl>
@@ -1014,6 +1060,11 @@ arrows.push({
   <dt><kbd>gP</kbd></dt>
   <dd>like <kbd>P</kbd> but leave cursor just after new text</dd>
 
+  <dt class="not-used"><kbd>zp</kbd></dt>
+  <dd class="not-used">not used</dd>
+  <dt class="not-used"><kbd>zP</kbd></dt>
+  <dd class="not-used">not used</dd>
+
   <dt><kbd>CTRL-p</kbd></dt>
   <dd>▴ move [count] lines upward (same as <kbd>k</kbd>)</dd>
 </dl>
@@ -1032,6 +1083,12 @@ arrows.push({
   <dt><kbd>gq</kbd>{motion}</dt>
   <dd>format lines that {motion} moves over</dd>
   <dt class="not-used"><kbd>gQ</kbd></dt>
+  <dd class="not-used">not used</dd>
+
+  <dt class="not-used"><kbd>zq</kbd></dt>
+  <dd class="not-used">not used</dd>
+
+  <dt class="not-used"><kbd>zQ</kbd></dt>
   <dd class="not-used">not used</dd>
 
   <dt><kbd>CTRL-q</kbd></dt>
@@ -1091,6 +1148,11 @@ arrows.push({
   <dt class="not-used"><kbd>gS</kbd></dt>
   <dd class="not-used">not used</dd>
 
+  <dt><kbd>zs</kbd></dt>
+  <dd>scroll text horizontally to position cursor to start of screen</dd>
+  <dt class="not-used"><kbd>zS</kbd></dt>
+  <dd class="not-used">not used</dd>
+
   <dt><kbd>CTRL-s</kbd></dt>
   <dd>stop terminal output</dd>
 </dl>
@@ -1111,6 +1173,11 @@ arrows.push({
   <dd>go to next tab page</dd>
   <dt><kbd>gT</kbd></dt>
   <dd>go to previous tab page</dd>
+
+  <dt><kbd>zt</kbd></dt>
+  <dd>redraw line [count] at top of window</dd>
+  <dt class="not-used"><kbd>zT</kbd></dt>
+  <dd class="not-used">not used</dd>
 
   <dt><kbd>CTRL-t</kbd></dt>
   <dd>jump to N older Tag in tag list</dd>
@@ -1179,6 +1246,11 @@ arrows.push({
   <dd>make {motion} text lowercase</dd>
   <dt><kbd>gU</kbd>{motion}</dt>
   <dd>make {motion} text uppercase</dd>
+
+  <dt><kbd>zu</kbd></dt>
+  <dd>remove word from spellfile</dd>
+  <dt><kbd>zU</kbd></dt>
+  <dd>remove word from internal wordlist</dd>
 
   <dt><kbd>CTRL-u</kbd></dt>
   <dd>▵ scroll <a href="#up">up</a> half a window (opposite <kbd>CTRL-d</kbd>)</dd>
@@ -1249,6 +1321,11 @@ arrows.push({
   <dt class="not-used"><kbd>gW</kbd></dt>
   <dd class="not-used">not used</dd>
 
+  <dt><kbd>zw</kbd></dt>
+  <dd>mark the word as wrong word (opposite <kbd>zg</kbd>)</dd>
+  <dt><kbd>zW</kbd></dt>
+  <dd>mark the word as wrong word in internal wordlist (opposite <kbd>zG</kbd>)</dd>
+
   <dt><kbd>CTRL-w</kbd></dt>
   <dd>prefix for window commands</dd>
 </dl>
@@ -1293,6 +1370,12 @@ arrows.push({
   <dt class="not-used"><kbd>gY</kbd></dt>
   <dd class="not-used">not used</dd>
 
+  <dt class="not-used"><kbd>zy</kbd></dt>
+  <dd class="not-used">not used</dd>
+
+  <dt class="not-used"><kbd>zY</kbd></dt>
+  <dd class="not-used">not used</dd>
+
   <dt><kbd>CTRL-y</kbd></dt>
   <dd>▵ scroll [count] lines <a href="#up">up</a> (opposite <kbd>CTRL-e</kbd>)</dd>
 </dl>
@@ -1305,7 +1388,7 @@ arrows.push({
 
 <dl data-key="z">
   <dt><kbd>z</kbd><dt>
-  <dd>do nothing by itself. It's a prefix key for all <a href="#fold">fold</a> related commands</dd>
+  <dd>do nothing by itself. It's a prefix key for <a href="#fold">fold</a>, scroll or spell related commands</dd>
   <dt><kbd>zz</kbd><dt>
   <dd>redraw current line at <a href="#middle-window">middle of window</a></dd>
   <dt><kbd>Z</kbd><dt>
@@ -1703,6 +1786,9 @@ arrows.push({
 
   <dt class="not-used"><kbd>g.</kbd></dt>
   <dd class="not-used">not used</dd>
+
+  <dt><kbd>z.</kbd></dt>
+  <dd>redraw, line [count] at center of window</dd>
 </dl>
 
 <h3>". register</h3>
@@ -1888,6 +1974,9 @@ arrows.push({
 
   <dt><kbd>g-</kbd></dt>
   <dd>go to [count] older text state</dd>
+
+  <dt><kbd>z-</kbd></dt>
+  <dd>redraw, line [count] at bottom of window</dd>
 </dl>
 
 <h3>"- register</h3>
@@ -1919,6 +2008,9 @@ arrows.push({
 
   <dt class="not-used"><kbd>g=</kbd></dt>
   <dd class="not-used">not used</dd>
+
+  <dt><kbd>z=</kbd></dt>
+  <dd>suggest correctly spelled words for word under cursor</dd>
 </dl>
 
 <h3>"= register</h3>
