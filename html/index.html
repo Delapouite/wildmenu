@@ -708,6 +708,9 @@
   <dt><kbd>g'</kbd>{mark}<dt>
   <dd>jump to {mark} but don't change the jumplist when jumping within current buffer</dd>
 
+  <dt class="not-used"><kbd>z'</kbd><dt>
+  <dd class="not-used">not used</dd>
+
   <dt class="not-used"><kbd>CTRL-'</kbd><dt>
   <dd class="not-used">not used</dd>
 </dl>
@@ -724,6 +727,9 @@
   <dd>use {register} for next command</dd>
 
   <dt class="not-used"><kbd>g"</kbd><dt>
+  <dd class="not-used">not used</dd>
+
+  <dt class="not-used"><kbd>z"</kbd><dt>
   <dd class="not-used">not used</dd>
 
   <dt class="not-used"><kbd>CTRL-"</kbd></dt>
@@ -743,6 +749,9 @@
   <dt><kbd>g`</kbd>{mark}<dt>
   <dd>jump to {mark} but don't change the jumplist when jumping within current buffer</dd>
 
+  <dt class="not-used"><kbd>z`</kbd><dt>
+  <dd class="not-used">not used</dd>
+
   <dt class="not-used"><kbd>CTRL-`</kbd><dt>
   <dd class="not-used">not used</dd>
 </dl>
@@ -760,8 +769,11 @@
 
   <dt><kbd>g~</kbd>{motion}</dt>
   <dd>switch case of {motion} text</dd>
-  <dt><kbd>g~~</kbd>{motion}</dt>
+  <dt><kbd>g~~</kbd></dt>
   <dd>switch case of current line</dd>
+
+  <dt class="not-used"><kbd>z~</kbd><dt>
+  <dd class="not-used">not used</dd>
 
   <dt class="not-used"><kbd>CTRL-~</kbd></dt>
   <dd class="not-used">not used</dd>
@@ -778,6 +790,9 @@
   <dd>filter {motion} text lines through external program {filter}</dd>
 
   <dt class="not-used"><kbd>g!</kbd></dt>
+  <dd class="not-used">not used</dd>
+
+  <dt class="not-used"><kbd>z!</kbd><dt>
   <dd class="not-used">not used</dd>
 
   <dt class="not-used"><kbd>CTRL-!</kbd></dt>
@@ -1071,6 +1086,9 @@
 <dl data-key="left-paren">
   <dt><kbd>(</kbd></dt>
   <dd>[count] sentences backward</dd>
+
+  <dt class="not-used"><kbd>z(</kbd></dt>
+  <dd class="not-used">not used</dd>
 </dl>
 
 </section>
@@ -1082,6 +1100,9 @@
 <dl data-key="right-paren">
   <dt><kbd>)</kbd></dt>
   <dd>[count] sentences forward</dd>
+
+  <dt class="not-used"><kbd>z)</kbd></dt>
+  <dd class="not-used">not used</dd>
 </dl>
 
 </section>
@@ -1140,6 +1161,9 @@
 
   <dt><kbd>g+</kbd></dt>
   <dd>go to [count] newer text state</dd>
+
+  <dt><kbd>z+</kbd></dt>
+  <dd>redraw, line [count] at top of window</dd>
 </dl>
 
 <h3>"+ register</h3>
@@ -1174,6 +1198,12 @@
 <dl data-key="underscore">
   <dt><kbd>_</kbd></dt>
   <dd>▾ move [count] lines - 1 downward on first non-blank char</dd>
+
+  <dt><kbd>g_</kbd></dt>
+  <dd>▾ move to the last non-blank char of line and [count - 1] lines downward</dd>
+
+  <dt class="not-used"><kbd>z_</kbd></dt>
+  <dd class="not-used">not used</dd>
 </dl>
 
 <h3>"_ register</h3>
