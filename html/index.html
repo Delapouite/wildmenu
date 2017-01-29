@@ -926,7 +926,10 @@
 
 <dl data-key="ampersand">
   <dt><kbd>&</kbd></dt>
-  <dd>repeat last substitute commmand</dd>
+  <dd>repeat last substitute command</dd>
+
+  <dt><kbd>g&</kbd></dt>
+  <dd>repeat last substitute command with last search pattern</dd>
 
   <dt class="not-used"><kbd>z&</kbd></dt>
   <dd class="not-used">not used</dd>
@@ -1151,6 +1154,9 @@
   <dt><kbd>(</kbd></dt>
   <dd>[count] sentences backward</dd>
 
+  <dt class="not-used"><kbd>g(</kbd></dt>
+  <dd class="not-used">not used</dd>
+
   <dt class="not-used"><kbd>z(</kbd></dt>
   <dd class="not-used">not used</dd>
 </dl>
@@ -1164,6 +1170,9 @@
 <dl data-key="right-paren">
   <dt><kbd>)</kbd></dt>
   <dd>[count] sentences forward</dd>
+
+  <dt class="not-used"><kbd>g)</kbd></dt>
+  <dd class="not-used">not used</dd>
 
   <dt class="not-used"><kbd>z)</kbd></dt>
   <dd class="not-used">not used</dd>
@@ -1179,6 +1188,9 @@
   <dt><kbd>{</kbd></dt>
   <dd>[count] paragraphs backward</dd>
 
+  <dt class="not-used"><kbd>g{</kbd></dt>
+  <dd class="not-used">not used</dd>
+
   <dt class="not-used"><kbd>z{</kbd></dt>
   <dd class="not-used">not used</dd>
 </dl>
@@ -1192,6 +1204,9 @@
 <dl data-key="right-brace">
   <dt><kbd>}</kbd></dt>
   <dd>[count] paragraphs forward</dd>
+
+  <dt class="not-used"><kbd>g}</kbd></dt>
+  <dd class="not-used">not used</dd>
 
   <dt class="not-used"><kbd>z}</kbd></dt>
   <dd class="not-used">not used</dd>
@@ -1207,6 +1222,9 @@
   <dt><kbd>[</kbd></dt>
   <dd>enter left bracket mode</dd>
 
+  <dt class="not-used"><kbd>g[</kbd></dt>
+  <dd class="not-used">not used</dd>
+
   <dt class="not-used"><kbd>z[</kbd></dt>
   <dd class="not-used">not used</dd>
 </dl>
@@ -1221,8 +1239,14 @@
   <dt><kbd>]</kbd></dt>
   <dd>enter right bracket mode</dd>
 
+  <dt><kbd>g]</kbd></dt>
+  <dd>jump to def of keyword under cursor. same as :tselect</dd>
+
   <dt class="not-used"><kbd>z]</kbd></dt>
   <dd class="not-used">not used</dd>
+
+  <dt><kbd>CTRL-]</kbd></dt>
+  <dd>jump to def of keyword under cursor. same as :tag</dd>
 </dl>
 
 </section>
